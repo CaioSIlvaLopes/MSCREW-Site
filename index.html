@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>MSCREW | Crew Management & Recrutamento Marítimo</title>
+  <meta name="description" content="MSCREW — Excelência em Crew Management e Recrutamento Marítimo. Tripulações qualificadas para armadores em todo o mundo. Conectamos os melhores profissionais do mar." />
+  <meta name="keywords" content="crew management, recrutamento marítimo, tripulação, marinheiros, armadores, offshore" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MSCREW | Crew Management & Recrutamento Marítimo" />
+  <meta property="og:description" content="Tripulações qualificadas para armadores em todo o mundo." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Estilos customizados (Vanilla CSS) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="corpo-pagina">
+
+  <!-- ============================================================
+       SEÇÃO 1 — CABEÇALHO (HEADER STICKY)
+       ============================================================ -->
+  <header id="cabecalho-principal" class="secao-cabecalho" role="banner">
+    <div class="container-padrao">
+      <div class="cabecalho-container">
+
+        <!-- Logo -->
+        <a href="#inicio" class="logo-link group" aria-label="MSCREW — Página Inicial">
+          <img src="assets/logo_mscrew.jpg" alt="MSCREW Logo" class="imagem-logo" />
+        </a>
+
+        <!-- Navegação Desktop -->
+        <nav class="navegacao-desktop" aria-label="Navegação Principal">
+          <a href="#servicos" class="link-navegacao nav-link">Serviços</a>
+          <a href="#vagas"    class="link-navegacao nav-link">Vagas</a>
+          <a href="#sobre"    class="link-navegacao nav-link">Sobre Nós</a>
+        </nav>
+
+        <!-- CTAs Desktop (Botões principais) -->
+        <div class="botoes-desktop">
+          <!-- Idioma Desktop -->
+          <div class="seletor-idioma">
+            <button class="btn-idioma pt" title="Português">
+              <img src="https://flagcdn.com/w20/br.png" alt="Bandeira do Brasil">
+              <span>PT</span>
+            </button>
+            <button class="btn-idioma en" title="English">
+              <img src="https://flagcdn.com/w20/us.png" alt="Bandeira dos EUA">
+              <span>EN</span>
+            </button>
+          </div>
+
+          <a href="#vagas" id="botao-portal-vagas" class="botao-vagas">
+            Trabalhe Conosco
+          </a>
+          <a href="#formulario" id="botao-cadastrar-cv" class="botao-primario">
+            Contato
+          </a>
+        </div>
+
+        <!-- Hamburguer Mobile (Botão do menu) -->
+        <button
+          id="botao-menu-mobile"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="menu-mobile-container"
+        >
+          <span class="linha-hamburguer hamburger-line"></span>
+          <span class="linha-hamburguer hamburger-line"></span>
+          <span class="linha-hamburguer hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile (Lista de links) -->
+    <div id="menu-mobile-container" role="navigation" aria-label="Menu Mobile">
+      <div class="menu-mobile-conteudo">
+        <a href="#solucoes" class="link-menu-mobile mobile-nav-link">Soluções</a>
+        <a href="#vagas"    class="link-menu-mobile mobile-nav-link">Vagas</a>
+        <a href="#sobre"    class="link-menu-mobile mobile-nav-link">Sobre</a>
+        <a href="#contato"  class="link-menu-mobile mobile-nav-link">Contato</a>
+        <div class="seletor-idioma">
+          <button class="btn-idioma pt" title="Português">
+            <img src="https://flagcdn.com/w20/br.png" alt="Bandeira do Brasil">
+            <span>PT</span>
+          </button>
+          <button class="btn-idioma en" title="English">
+            <img src="https://flagcdn.com/w20/us.png" alt="Bandeira dos EUA">
+            <span>EN</span>
+          </button>
+        </div>
+        <div class="menu-mobile-botoes">
+          <a href="#vagas"      class="botao-menu-vagas">Trabalhe Conosco</a>
+          <a href="#formulario" class="botao-menu-cv">Contato</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /CABEÇALHO -->
+
+
+  <!-- ============================================================
+       SEÇÃO 2 — INÍCIO (HERO SECTION)
+       ============================================================ -->
+  <section id="inicio" class="secao-hero" aria-label="Seção Principal">
+    
+    <!-- Elementos decorativos do Fundo -->
+    <div class="fundo-pontilhado"></div>
+    <div class="fundo-linhas-diagonais"></div>
+    <div class="orbe-luz-1"></div>
+    <div class="orbe-luz-2"></div>
+    <div class="orbe-luz-3"></div>
+
+    <!-- Conteúdo do Hero -->
+    <div class="conteudo-hero container-padrao">
+      <!-- H1 -->
+      <h1 class="titulo-principal">
+        Conectando 
+        <span class="palavra-destaque">
+           os Melhores Talentos
+          <svg class="linha-destaque" height="6" viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 5 Q50 0 100 4 Q150 8 200 3" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span><br/>
+        à Sua Operação Marítima.
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="subtitulo-hero">
+        Gestão inovadora e tecnologia a serviço dos setores naval e de petróleo. Oferecemos consultoria e recrutamento de ponta com os profissionais mais capacitados do mercado.
+      </p>
+      
+      <!-- Cartões de Chamada (B2B e B2C) -->
+      <div class="grid-cartoes-hero">
+
+        <!-- Card B2B — Armadores -->
+        <div class="cartao-b2b">
+          <div class="etiqueta-cartao etiqueta-cartao-b2b">
+            <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+            </svg>
+            <span class="texto-etiqueta-cartao">Entre em contato</span>
+          </div>
+          <h2 class="titulo-cartao">Fale Conosco</h2>
+          <p class="texto-cartao">
+            Gestão completa de tripulação, folha de pagamento e conformidade
+            com normas IMO / MLC 2006.
+          </p>
+
+          <a href="#solucoes" id="botao-hero-armadores" class="botao-cartao-b2b">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Solicitar Tripulação
+          </a>
+        </div>
+
+        <!-- Card B2C — Tripulantes -->
+        <div class="cartao-b2c">
+          <div class="etiqueta-cartao etiqueta-cartao-b2c">
+            <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+            </svg>
+            <span class="texto-etiqueta-cartao">Para Tripulantes</span>
+          </div>
+
+          <h2 class="titulo-cartao">Portal de Vagas</h2>
+          <p class="texto-cartao">
+            Vagas embarcadas em navios de carga, offshore, passageiros e especializados
+            no Brasil e no mundo.
+          </p>
+
+          <a href="#formulario" id="botao-hero-tripulantes" class="botao-cartao-b2c">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+            </svg>
+            Cadastrar Currículo
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Divisor em formato de onda -->
+    <div class="divisor-onda wave-container" aria-hidden="true">
+      <svg viewBox="0 0 1200 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C200,72 400,0 600,36 C800,72 1000,8 1200,36 L1200,72 L0,72 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+  <!-- /INÍCIO -->
+
+
+  <!-- ============================================================
+       SEÇÃO 3 — FAIXA DE NÚMEROS (TRUST BAR)
+       ============================================================ -->
+  <section id="faixa-numeros" class="secao-numeros" aria-label="Números de Confiança MSCREW">
+    <div class="linha-gradiente-topo"></div>
+
+    <div class="container-padrao">
+      <div class="grid-numeros">
+
+        <!-- Métrica 1 -->
+        <div class="item-numero trust-item reveal">
+          <div class="icone-numero">
+            <svg fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <span class="titulo-numero">Atuação Onshore<br/>e Offshore</span>
+        </div>
+
+        <!-- Métrica 2 -->
+        <div class="item-numero trust-item reveal" style="transition-delay:0.1s">
+          <div class="icone-numero">
+            <svg fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <span class="titulo-numero">Especialistas em<br/>Óleo & Gás</span>
+        </div>
+
+        <!-- Métrica 3 -->
+        <div class="item-numero trust-item reveal" style="transition-delay:0.2s">
+          <div class="icone-numero">
+            <svg fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12l7-7 7 7M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/>
+            </svg>
+          </div>
+          <span class="titulo-numero">Navios de<br/>Cabotagem e Apoio</span>
+        </div>
+
+        <!-- Métrica 4 -->
+        <div class="item-numero destaque reveal" style="transition-delay:0.3s">
+          <div class="icone-numero">
+            <svg fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <span class="titulo-numero">Banco de Dados<br/>Pré-Selecionado</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="linha-gradiente-base"></div>
+  </section>
+  <!-- /FAIXA DE NÚMEROS -->
+
+
+  <!-- ============================================================
+       SEÇÃO 4 — NOSSOS SERVIÇOS
+       ============================================================ -->
+  <section id="servicos" class="secao-servicos">
+    <!-- Fundo pontilhado decorativo -->
+    <div class="servicos-fundo-pontilhado"></div>
+
+    <div class="container-padrao">
+      <div class="servicos-cabecalho reveal">
+        <span class="servicos-etiqueta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+          O que fazemos
+        </span>
+        <h2 class="servicos-titulo">Nossos Serviços</h2>
+        <p class="servicos-subtitulo">Soluções completas em gestão de mão de obra marítima, onshore e offshore.</p>
+      </div>
+
+      <div class="servicos-grid">
+
+        <!-- CARD 1 -->
+        <div class="servico-card servico-span-2 reveal">
+          <div>
+            <div class="servico-card-topo">
+              <div class="servico-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <span class="servico-numero">01</span>
+            </div>
+            <h3>Terceirização de Mão de Obra – Marítima, Onshore e Offshore</h3>
+          </div>
+          <p>O vínculo empregatício é da MS CREW, nos contratos por prazo determinado ou indeterminado assumimos a Remuneração, Encargos Sociais e Trabalhistas.</p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="servico-card servico-span-2 reveal">
+          <div>
+            <div class="servico-card-topo">
+              <div class="servico-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <span class="servico-numero">02</span>
+            </div>
+            <h3>Recrutamento e Seleção de Pessoal Marítimo – Onshore e Offshore</h3>
+          </div>
+          <p>A MS CREW encaminhará candidatos de acordo com o perfil solicitado por sua empresa, na data e hora desejada.</p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="servico-card servico-span-2 reveal">
+          <div>
+            <div class="servico-card-topo">
+              <div class="servico-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <span class="servico-numero">03</span>
+            </div>
+            <h3>Folha de Pagamento Computadorizada / Administração de Pessoal</h3>
+          </div>
+          <p>Terceirizamos Recibos, Lançamentos, Cálculos da Folha (salário mensal, Rescisão, Férias, Adiantamento), Fechamento, RAIS, DIRF, FGTS/GEFIP/SEFIP.</p>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="servico-card servico-span-3 reveal">
+          <div>
+            <div class="servico-card-topo">
+              <div class="servico-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <span class="servico-numero">04</span>
+            </div>
+            <h3>Gestão de Pessoas com Ênfase nas Rotinas do Departamento de Pessoal</h3>
+          </div>
+          <p>Consultoria e suporte completo para as rotinas de DP, garantindo conformidade legal e eficiência operacional.</p>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="servico-card servico-span-3 reveal">
+          <div>
+            <div class="servico-card-topo">
+              <div class="servico-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <span class="servico-numero">05</span>
+            </div>
+            <h3>Logística</h3>
+          </div>
+          <p>Soluções logísticas integradas para operações marítimas, apoio portuário e suprimento de embarcações.</p>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="servico-card servico-span-6 reveal">
+          <div>
+            <div class="servico-card-topo">
+              <div class="servico-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span class="servico-numero">06</span>
+            </div>
+            <h3>Outros Serviços</h3>
+          </div>
+          <p>Benefícios (Ticket Refeição, Vale Transporte, Assistência Médica, Seguro de Vida em Grupo, Uniformes, Cesta Básica), além de soluções personalizadas para a sua operação.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SEÇÃO 5 — SOBRE NÓS
+       ============================================================ -->
+  <section id="sobre" class="secao-sobre">
+    <div class="container-padrao">
+      <div class="layout-sobre">
+        
+        <div class="imagem-sobre reveal">
+          <div class="moldura-imagem">
+            <div class="fundo-placeholder">
+              <span class="texto-placeholder">[ Espaço para Imagem da Empresa ]</span>
+            </div>
+            <div class="caixa-flutuante-sobre">
+              <p class="titulo-flutuante">MSCREW</p>
+              <p class="subtitulo-flutuante">Crew Management</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="conteudo-sobre reveal" style="transition-delay: 0.2s">
+          <h2 class="titulo-sobre">Por que escolher a MSCREW?</h2>
+          <div class="texto-sobre">
+            <p>
+              Com o crescimento dos setores naval e de petróleo, encontrar mão de obra qualificada tornou-se um desafio. A MSCREW nasceu para resolver exatamente isso. 
+            </p>
+            <p>
+              Somos especialistas em serviços marítimos e terceirização de staff. Através de um processo de seleção rigoroso e um banco de talentos altamente categorizado, entregamos soluções eficazes e inovadoras, garantindo retorno superior aos nossos clientes e valorizando o capital humano em todas as nossas operações.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================
+       SEÇÃO 6 — PORTAL DO TRIPULANTE (VAGAS)
+       ============================================================ -->
+  <section id="vagas" class="secao-vagas">
+    
+    <div class="container-padrao">
+      <div class="layout-vagas">
+        
+        <div class="conteudo-vagas reveal">
+          <div class="etiqueta-portal">
+            <span class="ponto-pulsante"></span>
+            <span class="texto-etiqueta-portal">Portal do Tripulante</span>
+          </div>
+          <h2 class="titulo-vagas">
+            Embarque na sua próxima <span class="palavra-destaque-vaga">grande oportunidade.</span>
+          </h2>
+          <p class="texto-vagas">
+            A MSCREW quer ser a sua agência de preferência. Valorizamos suas habilidades e conectamos o seu perfil às melhores vagas do mercado marítimo.
+          </p>
+          <a href="#formulario" class="botao-ver-vagas">
+            Ver Vagas Disponíveis
+          </a>
+        </div>
+
+        <!-- Vagas em Destaque simuladas -->
+        <div class="lista-vagas reveal" style="transition-delay: 0.2s">
+          <div class="cartao-vaga">
+            <div class="cabecalho-vaga">
+              <h3 class="titulo-cargo">Imediato (Chief Mate)</h3>
+              <span class="status-vaga">Aberta</span>
+            </div>
+            <p class="detalhes-vaga">Setor Offshore • Escala 28x28</p>
+            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+          
+          <div class="cartao-vaga">
+            <div class="cabecalho-vaga">
+              <h3 class="titulo-cargo">Moço de Convés (OS)</h3>
+              <span class="status-vaga">Aberta</span>
+            </div>
+            <p class="detalhes-vaga">Navio de Cabotagem • Início Imediato</p>
+            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+          
+          <div class="cartao-vaga">
+            <div class="cabecalho-vaga">
+              <h3 class="titulo-cargo">Comandante (Master)</h3>
+              <span class="status-vaga">Aberta</span>
+            </div>
+            <p class="detalhes-vaga">Rebocador Portuário • Base Santos/SP</p>
+            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 7 — FORMULÁRIO DE CONTATO
+       ============================================================ -->
+  <section id="contato" class="secao-contato">
+    <div class="container-formulario">
+      
+      <div class="cabecalho-contato reveal">
+        <h2 class="titulo-contato">Fale Conosco</h2>
+        <p class="subtitulo-contato">Envie sua mensagem, solicite um orçamento ou cadastre seu currículo.</p>
+      </div>
+
+      <div id="formulario" class="caixa-formulario reveal">
+        <!-- Substituir o atributo action pelo endpoint do Formspree ou PHP -->
+        <form action="#" method="POST" enctype="multipart/form-data" class="formulario-html">
+          
+          <div class="linha-inputs">
+            <div class="grupo-input">
+              <label for="nome" class="rotulo">Nome Completo</label>
+              <input type="text" id="nome" name="nome" class="campo-texto" required>
+            </div>
+            <div class="grupo-input">
+              <label for="email" class="rotulo">E-mail</label>
+              <input type="email" id="email" name="email" class="campo-texto" required>
+            </div>
+          </div>
+
+          <div class="linha-inputs">
+            <div class="grupo-input">
+              <label for="telefone" class="rotulo">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" class="campo-texto">
+            </div>
+            <div class="grupo-input">
+              <label for="assunto" class="rotulo">Assunto</label>
+              <select id="assunto" name="assunto" class="campo-select" required>
+                <option value="" disabled selected>Selecione uma opção...</option>
+                <option value="armador">Sou Armador - Solicitar Tripulação</option>
+                <option value="vaga">Sou Marítimo - Enviar Currículo</option>
+                <option value="duvida">Dúvidas Gerais</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grupo-input">
+            <label for="mensagem" class="rotulo">Mensagem (Opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4" class="campo-textarea"></textarea>
+          </div>
+
+          <!-- Upload de Currículo (PDF) -->
+          <div class="area-upload">
+            <svg class="icone-upload" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+            <label for="curriculo" class="rotulo-upload">
+              <span class="texto-upload">Anexe seu Currículo (PDF)</span>
+              <span class="tamanho-upload">Tamanho máximo: 5MB</span>
+              <input id="curriculo" name="curriculo" type="file" accept=".pdf" class="sr-only">
+            </label>
+          </div>
+
+          <div class="area-botao">
+            <button type="submit" id="botao-enviar-formulario" class="botao-enviar">
+              Enviar Mensagem
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SEÇÃO 8 — RODAPÉ (FOOTER)
+       ============================================================ -->
+  <footer id="rodape-principal" class="secao-rodape">
+    <div class="container-padrao">
+      <div class="grade-rodape">
+        
+        <!-- Coluna 1: Sobre -->
+        <div class="coluna-rodape-sobre">
+          <a href="#inicio" class="logo-rodape">
+            <img src="assets/logo_mscrew.jpg" alt="MSCREW Logo" />
+            <span class="texto-logo">MSCREW</span>
+          </a>
+          <p class="texto-rodape">
+            Excelência em Crew Management. Conectamos os melhores profissionais marítimos às maiores operações globais.
+          </p>
+        </div>
+
+        <!-- Coluna 2: Links Úteis -->
+        <div class="coluna-rodape-links">
+          <h4 class="titulo-coluna">Navegação</h4>
+          <ul class="lista-links">
+            <li><a href="#inicio" class="link-rodape">Início</a></li>
+            <li><a href="#solucoes" class="link-rodape">Para Armadores</a></li>
+            <li><a href="#vagas" class="link-rodape">Portal de Vagas</a></li>
+            <li><a href="#sobre" class="link-rodape">Sobre a MSCREW</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Contato -->
+        <div class="coluna-rodape-contato">
+          <h4 class="titulo-coluna">Escritório</h4>
+          <ul class="lista-contato">
+            <li class="item-contato">
+              <svg class="icone-contato" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span class="texto-endereco">Av. Rio Branco, Centro<br/>Rio de Janeiro - RJ, Brasil</span>
+            </li>
+            <li class="item-contato">
+              <svg class="icone-contato" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:contato@mscrew.com.br" class="link-email">contato@mscrew.com.br</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Plantão 24/7 -->
+        <div class="coluna-rodape-plantao">
+          <h4 class="titulo-coluna">Atendimento</h4>
+          <div class="caixa-plantao">
+            <div class="cabecalho-plantao">
+              <span class="ponto-pulsante"></span>
+              <span class="texto-status">Plantão 24/7</span>
+            </div>
+            <p class="texto-plantao">Suporte emergencial para tripulações e armadores.</p>
+            <a href="tel:+5521999999999" class="link-telefone">
+              +55 (21) 99999-9999
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="linha-inferior-rodape">
+        <p class="texto-direitos">
+          &copy; 2026 MSCREW Crew Management. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
