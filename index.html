@@ -43,6 +43,12 @@
           <a href="#servicos" class="link-navegacao nav-link">Serviços</a>
           <a href="#vagas"    class="link-navegacao nav-link">Vagas</a>
           <a href="#sobre"    class="link-navegacao nav-link">Sobre Nós</a>
+           <a href="#vagas" id="botao-portal-vagas" class="link-navegacao nav-link">
+            Trabalhe Conosco
+          </a>
+          <a href="#formulario" id="botao-cadastrar-cv" class="link-navegacao nav-link">
+            Contato
+          </a>
         </nav>
 
         <!-- CTAs Desktop (Botões principais) -->
@@ -58,14 +64,14 @@
               <span>EN</span>
             </button>
           </div>
-
+<!--
           <a href="#vagas" id="botao-portal-vagas" class="botao-vagas">
             Trabalhe Conosco
           </a>
           <a href="#formulario" id="botao-cadastrar-cv" class="botao-primario">
             Contato
           </a>
-        </div>
+        </div>-->
 
         <!-- Hamburguer Mobile (Botão do menu) -->
         <button
@@ -122,71 +128,75 @@
 
     <!-- Conteúdo do Hero -->
     <div class="conteudo-hero container-padrao">
-      <!-- H1 -->
-      <h1 class="titulo-principal">
-        Conectando 
-        <span class="palavra-destaque">
-           os Melhores Talentos
-          <svg class="linha-destaque" height="6" viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M0 5 Q50 0 100 4 Q150 8 200 3" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          </svg>
-        </span><br/>
-        à Sua Operação Marítima.
-      </h1>
+      <div class="hero-layout-grid">
+        <div class="hero-texto-coluna">
+          <!-- H1 -->
+          <h1 class="titulo-principal">
+            Conectando 
+            <span class="palavra-destaque">
+               os Melhores Talentos
+              <svg class="linha-destaque" height="6" viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M0 5 Q50 0 100 4 Q150 8 200 3" stroke="#ff5700" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span><br/>
+            à Sua Operação Marítima.
+          </h1>
 
-      <!-- Subtítulo -->
-      <p class="subtitulo-hero">
-        Gestão inovadora e tecnologia a serviço dos setores naval e de petróleo. Oferecemos consultoria e recrutamento de ponta com os profissionais mais capacitados do mercado.
-      </p>
+          <!-- Subtítulo -->
+          <p class="subtitulo-hero">
+            Gestão inovadora e tecnologia a serviço dos setores naval e de petróleo. Oferecemos consultoria e recrutamento de ponta com os profissionais mais capacitados do mercado.
+          </p>
+        </div>
       
-      <!-- Cartões de Chamada (B2B e B2C) -->
-      <div class="grid-cartoes-hero">
+        <!-- Cartões de Chamada (B2B e B2C) -->
+        <div class="grid-cartoes-hero">
 
-        <!-- Card B2B — Armadores -->
-        <div class="cartao-b2b">
-          <div class="etiqueta-cartao etiqueta-cartao-b2b">
-            <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-            </svg>
-            <span class="texto-etiqueta-cartao">Entre em contato</span>
+          <!-- Card B2B — Armadores -->
+          <div class="cartao-b2b">
+            <div class="etiqueta-cartao etiqueta-cartao-b2b">
+              <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+              </svg>
+              <span class="texto-etiqueta-cartao">Entre em contato</span>
+            </div>
+            <h2 class="titulo-cartao">Fale Conosco</h2>
+            <p class="texto-cartao">
+              Gestão completa de tripulação, folha de pagamento e conformidade
+              com normas IMO / MLC 2006.
+            </p>
+
+            <a href="#solucoes" id="botao-hero-armadores" class="botao-cartao-b2b">
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+              Solicitar Tripulação
+            </a>
           </div>
-          <h2 class="titulo-cartao">Fale Conosco</h2>
-          <p class="texto-cartao">
-            Gestão completa de tripulação, folha de pagamento e conformidade
-            com normas IMO / MLC 2006.
-          </p>
+  <!--
+          <!-- Card B2C — Tripulantes 
+          <div class="cartao-b2c">
+            <div class="etiqueta-cartao etiqueta-cartao-b2c">
+              <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+              </svg>
+              <span class="texto-etiqueta-cartao">Para Tripulantes</span>
+            </div>
 
-          <a href="#solucoes" id="botao-hero-armadores" class="botao-cartao-b2b">
-            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-            </svg>
-            Solicitar Tripulação
-          </a>
-        </div>
+            <h2 class="titulo-cartao">Portal de Vagas</h2>
+            <p class="texto-cartao">
+              Vagas embarcadas em navios de carga, offshore, passageiros e especializados
+              no Brasil e no mundo.
+            </p>
 
-        <!-- Card B2C — Tripulantes -->
-        <div class="cartao-b2c">
-          <div class="etiqueta-cartao etiqueta-cartao-b2c">
-            <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-            </svg>
-            <span class="texto-etiqueta-cartao">Para Tripulantes</span>
+            <a href="#formulario" id="botao-hero-tripulantes" class="botao-cartao-b2c">
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+              </svg>
+              Cadastrar Currículo
+            </a>
           </div>
-
-          <h2 class="titulo-cartao">Portal de Vagas</h2>
-          <p class="texto-cartao">
-            Vagas embarcadas em navios de carga, offshore, passageiros e especializados
-            no Brasil e no mundo.
-          </p>
-
-          <a href="#formulario" id="botao-hero-tripulantes" class="botao-cartao-b2c">
-            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true" width="16" height="16">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
-            </svg>
-            Cadastrar Currículo
-          </a>
+  -->
         </div>
-
       </div>
     </div>
 
@@ -275,99 +285,114 @@
         <p class="servicos-subtitulo">Soluções completas em gestão de mão de obra marítima, onshore e offshore.</p>
       </div>
 
-      <div class="servicos-grid">
+      <div class="servicos-carousel-container">
+        <div class="servicos-carousel-wrapper">
+          <div class="servicos-carousel-track" id="servicos-track">
 
-        <!-- CARD 1 -->
-        <div class="servico-card servico-span-2 reveal">
-          <div>
-            <div class="servico-card-topo">
-              <div class="servico-icone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <!-- CARD 1 -->
+            <div class="servico-card reveal">
+              <div>
+                <div class="servico-card-topo">
+                  <div class="servico-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  </div>
+                  <span class="servico-numero">01</span>
+                </div>
+                <h3>Terceirização de Mão de Obra – Marítima, Onshore e Offshore</h3>
               </div>
-              <span class="servico-numero">01</span>
+              <p>O vínculo empregatício é da MS CREW, nos contratos por prazo determinado ou indeterminado assumimos a Remuneração, Encargos Sociais e Trabalhistas.</p>
             </div>
-            <h3>Terceirização de Mão de Obra – Marítima, Onshore e Offshore</h3>
-          </div>
-          <p>O vínculo empregatício é da MS CREW, nos contratos por prazo determinado ou indeterminado assumimos a Remuneração, Encargos Sociais e Trabalhistas.</p>
-        </div>
 
-        <!-- CARD 2 -->
-        <div class="servico-card servico-span-2 reveal">
-          <div>
-            <div class="servico-card-topo">
-              <div class="servico-icone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <!-- CARD 2 -->
+            <div class="servico-card reveal">
+              <div>
+                <div class="servico-card-topo">
+                  <div class="servico-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  </div>
+                  <span class="servico-numero">02</span>
+                </div>
+                <h3>Recrutamento e Seleção de Pessoal Marítimo – Onshore e Offshore</h3>
               </div>
-              <span class="servico-numero">02</span>
+              <p>A MS CREW encaminhará candidatos de acordo com o perfil solicitado por sua empresa, na data e hora desejada.</p>
             </div>
-            <h3>Recrutamento e Seleção de Pessoal Marítimo – Onshore e Offshore</h3>
-          </div>
-          <p>A MS CREW encaminhará candidatos de acordo com o perfil solicitado por sua empresa, na data e hora desejada.</p>
-        </div>
 
-        <!-- CARD 3 -->
-        <div class="servico-card servico-span-2 reveal">
-          <div>
-            <div class="servico-card-topo">
-              <div class="servico-icone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <!-- CARD 3 -->
+            <div class="servico-card reveal">
+              <div>
+                <div class="servico-card-topo">
+                  <div class="servico-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  </div>
+                  <span class="servico-numero">03</span>
+                </div>
+                <h3>Folha de Pagamento Computadorizada / Administração de Pessoal</h3>
               </div>
-              <span class="servico-numero">03</span>
+              <p>Terceirizamos Recibos, Lançamentos, Cálculos da Folha (salário mensal, Rescisão, Férias, Adiantamento), Fechamento, RAIS, DIRF, FGTS/GEFIP/SEFIP.</p>
             </div>
-            <h3>Folha de Pagamento Computadorizada / Administração de Pessoal</h3>
-          </div>
-          <p>Terceirizamos Recibos, Lançamentos, Cálculos da Folha (salário mensal, Rescisão, Férias, Adiantamento), Fechamento, RAIS, DIRF, FGTS/GEFIP/SEFIP.</p>
-        </div>
 
-        <!-- CARD 4 -->
-        <div class="servico-card servico-span-3 reveal">
-          <div>
-            <div class="servico-card-topo">
-              <div class="servico-icone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <!-- CARD 4 -->
+            <div class="servico-card reveal">
+              <div>
+                <div class="servico-card-topo">
+                  <div class="servico-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  </div>
+                  <span class="servico-numero">04</span>
+                </div>
+                <h3>Gestão de Pessoas com Ênfase nas Rotinas do Departamento de Pessoal</h3>
               </div>
-              <span class="servico-numero">04</span>
+              <p>Consultoria e suporte completo para as rotinas de DP, garantindo conformidade legal e eficiência operacional.</p>
             </div>
-            <h3>Gestão de Pessoas com Ênfase nas Rotinas do Departamento de Pessoal</h3>
-          </div>
-          <p>Consultoria e suporte completo para as rotinas de DP, garantindo conformidade legal e eficiência operacional.</p>
-        </div>
 
-        <!-- CARD 5 -->
-        <div class="servico-card servico-span-3 reveal">
-          <div>
-            <div class="servico-card-topo">
-              <div class="servico-icone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <!-- CARD 5 -->
+            <div class="servico-card reveal">
+              <div>
+                <div class="servico-card-topo">
+                  <div class="servico-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  </div>
+                  <span class="servico-numero">05</span>
+                </div>
+                <h3>Logística</h3>
               </div>
-              <span class="servico-numero">05</span>
+              <p>Soluções logísticas integradas para operações marítimas, apoio portuário e suprimento de embarcações.</p>
             </div>
-            <h3>Logística</h3>
-          </div>
-          <p>Soluções logísticas integradas para operações marítimas, apoio portuário e suprimento de embarcações.</p>
-        </div>
 
-        <!-- CARD 6 -->
-        <div class="servico-card servico-span-6 reveal">
-          <div>
-            <div class="servico-card-topo">
-              <div class="servico-icone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            <!-- CARD 6 -->
+            <div class="servico-card reveal">
+              <div>
+                <div class="servico-card-topo">
+                  <div class="servico-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                  </div>
+                  <span class="servico-numero">06</span>
+                </div>
+                <h3>Outros Serviços</h3>
               </div>
-              <span class="servico-numero">06</span>
+              <p>Benefícios (Ticket Refeição, Vale Transporte, Assistência Médica, Seguro de Vida em Grupo, Uniformes, Cesta Básica), além de soluções personalizadas para a sua operação.</p>
             </div>
-            <h3>Outros Serviços</h3>
-          </div>
-          <p>Benefícios (Ticket Refeição, Vale Transporte, Assistência Médica, Seguro de Vida em Grupo, Uniformes, Cesta Básica), além de soluções personalizadas para a sua operação.</p>
-        </div>
 
+          </div>
+        </div>
+        
+        <!-- Botões do Carrossel -->
+        <div class="servicos-carousel-controles">
+          <button class="carousel-btn prev" id="servicos-prev" aria-label="Serviço anterior">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="carousel-dots" id="servicos-dots"></div>
+          <button class="carousel-btn next" id="servicos-next" aria-label="Próximo serviço">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ============================================================
-       SEÇÃO 5 — SOBRE NÓS
+       SEÇÃO  — SOBRE NÓS
        ============================================================ -->
   <section id="sobre" class="secao-sobre">
     <div class="container-padrao">
@@ -375,9 +400,7 @@
         
         <div class="imagem-sobre reveal">
           <div class="moldura-imagem">
-            <div class="fundo-placeholder">
-              <span class="texto-placeholder">[ Espaço para Imagem da Empresa ]</span>
-            </div>
+            <img src="assets/sobre-nos-home.jpg" alt="Sobre a MSCREW">
             <div class="caixa-flutuante-sobre">
               <p class="titulo-flutuante">MSCREW</p>
               <p class="subtitulo-flutuante">Crew Management</p>
@@ -550,9 +573,9 @@
           <h4 class="titulo-coluna">Navegação</h4>
           <ul class="lista-links">
             <li><a href="#inicio" class="link-rodape">Início</a></li>
-            <li><a href="#solucoes" class="link-rodape">Para Armadores</a></li>
-            <li><a href="#vagas" class="link-rodape">Portal de Vagas</a></li>
-            <li><a href="#sobre" class="link-rodape">Sobre a MSCREW</a></li>
+            <li><a href="#servicos" class="link-rodape">Serviços</a></li>
+            <li><a href="#sobre" class="link-rodape">Sobre nós</a></li>
+            <li><a href="#contato" class="link-rodape">Contato</a></li>
           </ul>
         </div>
 
@@ -574,16 +597,14 @@
         <!-- Coluna 4: Plantão 24/7 -->
         <div class="coluna-rodape-plantao">
           <h4 class="titulo-coluna">Atendimento</h4>
-          <div class="caixa-plantao">
-            <div class="cabecalho-plantao">
-              <span class="ponto-pulsante"></span>
-              <span class="texto-status">Plantão 24/7</span>
-            </div>
-            <p class="texto-plantao">Suporte emergencial para tripulações e armadores.</p>
-            <a href="tel:+5521999999999" class="link-telefone">
-              +55 (21) 99999-9999
-            </a>
-          </div>
+          <ul class="lista-contato">
+            <li class="item-contato">
+              <svg class="icone-contato" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <a href="tel:+5521999999999" class="link-email">
+                +55 (21) 99999-9999
+              </a>
+            </li>
+          </ul>
         </div>
 
       </div>
