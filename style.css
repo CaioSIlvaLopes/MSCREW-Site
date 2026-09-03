@@ -449,6 +449,12 @@ button, input, select, textarea {
 }
 .divisor-onda svg { display: block; width: calc(100% + 1.3px); height: 72px; }
 
+.divisor-onda-top {
+  position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 10; pointer-events: none;
+  transform: rotate(180deg);
+}
+.divisor-onda-top svg { display: block; width: calc(100% + 1.3px); height: 72px; }
+
 /* ==========================================================================
    TRUST BAR (FAIXA DE NÚMEROS)
    ========================================================================== */
@@ -469,7 +475,7 @@ button, input, select, textarea {
 
 .grid-numeros {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-  border: 1px solid var(--gray-100); border-radius: 1rem; overflow: hidden; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+  border: 1px solid var(--gray-100); border-radius: 1rem; overflow: hidden; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 62%);
 }
 @media (min-width: 1024px) {
   .grid-numeros { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -520,7 +526,7 @@ button, input, select, textarea {
 
 .servicos-fundo-pontilhado {
   position: absolute; inset: 0; pointer-events: none;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255 255 255 / 15%) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
