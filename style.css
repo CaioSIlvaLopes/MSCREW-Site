@@ -2,23 +2,23 @@
    RESET & VARIÁVEIS GLOBAIS
    ========================================================================== */
 :root {
-  /* Cores Navy */
-  --navy-50:  #eef2ff;
-  --navy-100: #dde6f8;
-  --navy-200: #b9ccf1;
-  --navy-300: #85a5e4;
-  --navy-400: #4d7cd4;
-  --navy-500: #2b5cb8;
-  --navy-600: #1e4494;
-  --navy-700: #1a3a7a;
-  --navy-800: #0f2451;
-  --navy-900: #071429;
-  --navy-950: #030b1a;
+  /* Cores Navy Suavizadas */
+  --navy-50:  #f0f4f8;
+  --navy-100: #e1e7f0;
+  --navy-200: #c4d1e2;
+  --navy-300: #9db5ce;
+  --navy-400: #7697b9;
+  --navy-500: #55799e;
+  --navy-600: #416081;
+  --navy-700: #334d68;
+  --navy-800: #283d54;
+  --navy-900: #1d2c3f;
+  --navy-950: #121c2a;
 
-  /* Cores Gold */
-  --gold-300: #ff5700;
-  --gold-400: #ff5700;
-  --gold-500: #ff5700;
+  /* Cores Gold/Laranja Suavizadas */
+  --gold-300: #ff9d66;
+  --gold-400: #ff7a33;
+  --gold-500: #e65c00;
 
   /* Básicas */
   --white: #ffffff;

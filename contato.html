@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fale Conosco | MSCREW - Crew Management e Recrutamento Maritimo</title>
+  <meta name="description" content="Entre em contato com a MSCREW. Atendimento comercial, solicitacao de tripulacao, envio de curriculo e duvidas gerais. Especialistas em crew management maritimo." />
+  <meta name="keywords" content="contato MSCREW, fale conosco, crew management contato, recrutamento maritimo, tripulacao" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Fale Conosco | MSCREW - Crew Management" />
+  <meta property="og:description" content="Solicite tripulacao, envie seu curriculo ou tire suas duvidas com os especialistas da MSCREW." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body.pagina-contato {
+      background-color: var(--white);
+      color: var(--gray-900);
+      line-height: 1.5;
+      overflow-x: hidden;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+    .contato-hero {
+      position: relative;
+      min-height: 52vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 5rem;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(7,20,41,0.93) 0%, rgba(15,36,81,0.88) 50%, rgba(26,58,122,0.8) 100%),
+        url("./assets/fundo-hero.jpg") center/cover no-repeat;
+    }
+    .ch-pontilhado {
+      position: absolute; inset: 0; opacity: 0.04; pointer-events: none;
+      background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .ch-orbe-1 {
+      position: absolute; top: -6rem; right: -6rem; width: 450px; height: 450px;
+      background: rgba(43,92,184,0.2); filter: blur(80px); border-radius: 50%; pointer-events: none;
+    }
+    .ch-orbe-2 {
+      position: absolute; bottom: 0; left: -4rem; width: 300px; height: 300px;
+      background: rgba(26,58,122,0.3); filter: blur(80px); border-radius: 50%; pointer-events: none;
+    }
+    .ch-conteudo {
+      position: relative; z-index: 10;
+      padding-top: 9rem;
+      width: 100%;
+    }
+    .ch-breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; color: var(--gray-400);
+      margin-bottom: 2rem;
+      animation: fadeInDown 0.6s ease-out forwards; animation-delay: 0.05s; opacity: 0;
+    }
+    .ch-breadcrumb a { color: var(--gray-300); transition: color 0.2s; }
+    .ch-breadcrumb a:hover { color: var(--gold-400); }
+    .ch-breadcrumb svg { width: 12px; height: 12px; opacity: 0.5; }
+    .ch-etiqueta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 9999px;
+      padding: 0.375rem 1rem; margin-bottom: 1.5rem;
+      font-size: 0.75rem; font-weight: 600; color: var(--gray-200);
+      letter-spacing: 0.05em; text-transform: uppercase;
+      animation: fadeInDown 0.6s ease-out forwards; animation-delay: 0.1s; opacity: 0;
+    }
+    .ch-etiqueta svg { width: 14px; height: 14px; color: var(--gold-400); }
+    .ch-titulo {
+      font-size: 2.5rem; font-weight: 900; color: var(--white);
+      line-height: 1.07; letter-spacing: -0.025em; max-width: 50rem;
+      margin-bottom: 1.25rem;
+      animation: fadeInDown 0.6s ease-out forwards; animation-delay: 0.2s; opacity: 0;
+    }
+    @media (min-width: 640px)  { .ch-titulo { font-size: 3.25rem; } }
+    @media (min-width: 1024px) { .ch-titulo { font-size: 3.75rem; } }
+    .ch-titulo .destaque {
+      position: relative; display: inline-block; color: var(--gold-400);
+    }
+    .ch-titulo .destaque svg {
+      position: absolute; bottom: -0.55rem; left: 0; width: 100%; display: block;
+    }
+    .ch-subtitulo {
+      font-size: 1.125rem; color: var(--gray-300); max-width: 38rem; line-height: 1.625;
+      animation: fadeInDown 0.6s ease-out forwards; animation-delay: 0.35s; opacity: 0;
+    }
+    .scp { padding: 5rem 0; background: var(--white); }
+    @media (min-width: 1024px) { .scp { padding: 6rem 0; } }
+    .ctg {
+      display: grid; grid-template-columns: 1fr; gap: 3rem;
+    }
+    @media (min-width: 1024px) {
+      .ctg { grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: start; }
+    }
+    .ci { display: flex; flex-direction: column; gap: 0; }
+    .ci-header { margin-bottom: 2.5rem; }
+    .ci-etiqueta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 700; color: var(--gold-400);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: rgba(255,87,0,0.08); border: 1px solid rgba(255,87,0,0.2);
+      padding: 0.35rem 0.9rem; border-radius: 9999px; margin-bottom: 1rem;
+    }
+    .ci-etiqueta svg { width: 14px; height: 14px; }
+    .ci-titulo {
+      font-size: 1.75rem; font-weight: 900; color: var(--navy-800); line-height: 1.2; margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) { .ci-titulo { font-size: 2rem; } }
+    .ci-desc { font-size: 1rem; color: var(--gray-500); line-height: 1.7; }
+    .ci-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.25rem; border-radius: 0.875rem;
+      border: 1px solid var(--gray-100); background: var(--gray-50);
+      margin-bottom: 1rem; transition: all 0.25s ease;
+    }
+    .ci-item:last-of-type { margin-bottom: 0; }
+    .ci-item:hover {
+      border-color: rgba(255,87,0,0.25);
+      background: rgba(255,87,0,0.03);
+      box-shadow: 0 4px 20px rgba(255,87,0,0.06);
+      transform: translateX(4px);
+    }
+    .ci-item-icone {
+      flex-shrink: 0; width: 2.75rem; height: 2.75rem;
+      border-radius: 0.625rem;
+      background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ci-item-icone svg { width: 18px; height: 18px; color: var(--gold-400); }
+    .ci-item-body h3 { font-size: 0.9rem; font-weight: 700; color: var(--navy-800); margin-bottom: 0.35rem; }
+    .ci-item-body p  { font-size: 0.85rem; color: var(--gray-500); line-height: 1.5; }
+    .ci-item-body a  { font-size: 0.85rem; color: var(--gold-500); font-weight: 600; transition: color 0.2s; }
+    .ci-item-body a:hover { color: var(--navy-700); }
+    .ci-detalhe {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.8rem; font-weight: 600; color: var(--navy-600);
+      background: rgba(30,68,148,0.07); padding: 0.2rem 0.6rem;
+      border-radius: 9999px; margin-top: 0.5rem;
+    }
+    .cfc {
+      background: var(--white); border-radius: 1.5rem; padding: 2rem;
+      border: 1px solid var(--gray-100);
+      box-shadow: 0 20px 60px -10px rgba(7,20,41,0.08);
+    }
+    @media (min-width: 768px) { .cfc { padding: 2.5rem; } }
+    .cfc-header { margin-bottom: 2rem; }
+    .cfc-header h2 { font-size: 1.375rem; font-weight: 800; color: var(--navy-800); margin-bottom: 0.5rem; }
+    .cfc-header p  { font-size: 0.9rem; color: var(--gray-500); }
+    .cf { display: flex; flex-direction: column; gap: 1.25rem; }
+    .fg { display: flex; flex-direction: column; gap: 0.375rem; }
+    .fgd { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 600px) { .fgd { grid-template-columns: 1fr 1fr; } }
+    .fl { font-size: 0.825rem; font-weight: 600; color: var(--gray-700); }
+    .fl .ob { color: var(--gold-500); margin-left: 2px; }
+    .fi, .fs, .ft {
+      width: 100%; padding: 0.75rem 1rem; border-radius: 0.625rem;
+      border: 1.5px solid var(--gray-200); background: var(--gray-50);
+      color: var(--gray-900); font-size: 0.9rem; font-family: "Inter", sans-serif;
+      outline: none; transition: all 0.2s ease;
+    }
+    .fi::placeholder, .ft::placeholder { color: var(--gray-400); }
+    .fi:focus, .fs:focus, .ft:focus {
+      border-color: var(--gold-400); background: var(--white);
+      box-shadow: 0 0 0 3px rgba(255,87,0,0.12);
+    }
+    .fs { cursor: pointer; color: var(--gray-700); }
+    .ft { resize: vertical; min-height: 130px; line-height: 1.6; }
+    .fu {
+      border: 2px dashed var(--gray-300); border-radius: 0.75rem; padding: 1.5rem;
+      text-align: center; background: rgba(249,250,251,0.5);
+      transition: border-color 0.2s ease, background 0.2s ease; cursor: pointer;
+    }
+    .fu:hover { border-color: var(--gold-400); background: rgba(255,87,0,0.02); }
+    .fu-icon { width: 2.5rem; height: 2.5rem; color: var(--gray-400); margin: 0 auto 0.6rem; }
+    .fu label { cursor: pointer; }
+    .fu-txt  { font-size: 0.875rem; font-weight: 600; color: var(--gold-500); display: block; }
+    .fu-size { font-size: 0.8rem; color: var(--gray-400); display: block; margin-top: 0.2rem; }
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--navy-800), var(--navy-700));
+      color: var(--white); font-weight: 700; font-size: 1rem;
+      font-family: "Inter", sans-serif;
+      padding: 1rem 2rem; border-radius: 0.75rem;
+      display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem;
+      box-shadow: 0 8px 20px rgba(15,36,81,0.25);
+      transition: all 0.25s ease; cursor: pointer; border: none;
+      position: relative; overflow: hidden;
+    }
+    .btn-submit::before {
+      content: ""; position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.12), transparent);
+      transform: skewX(-20deg); transition: left 0.6s ease;
+    }
+    .btn-submit:hover::before { left: 160%; }
+    .btn-submit:hover {
+      background: linear-gradient(135deg, var(--navy-700), var(--navy-600));
+      box-shadow: 0 12px 28px rgba(15,36,81,0.38);
+      transform: translateY(-3px);
+    }
+    .btn-submit svg { width: 1rem; height: 1rem; }
+    .f-aviso {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; color: var(--gray-400); justify-content: center;
+    }
+    .sm { background: var(--gray-50); padding: 4rem 0 0; border-top: 1px solid var(--gray-100); }
+    .sm-header { text-align: center; margin-bottom: 2.5rem; }
+    .sm-etiqueta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 700; color: var(--gold-400);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: rgba(255,87,0,0.08); border: 1px solid rgba(255,87,0,0.2);
+      padding: 0.35rem 0.9rem; border-radius: 9999px; margin-bottom: 0.75rem;
+    }
+    .sm-etiqueta svg { width: 14px; height: 14px; }
+    .sm-titulo { font-size: 1.75rem; font-weight: 900; color: var(--navy-800); }
+    .sm-map { line-height: 0; overflow: hidden; }
+    .sm-map iframe { display: block; width: 100%; height: 420px; border: 0; filter: grayscale(15%) contrast(1.05); }
+    @media (min-width: 768px) { .sm-map iframe { height: 500px; } }
+    .rd2 { transition-delay: 0.2s !important; }
+  </style>
+</head>
+<body class="pagina-contato">
+
+  <div id="header-placeholder"></div>
+  <script src="partials/load-header.js"></script>
+
+  <!-- HERO -->
+  <section class="contato-hero" aria-label="Fale Conosco - MSCREW">
+    <div class="ch-pontilhado"></div>
+    <div class="ch-orbe-1"></div>
+    <div class="ch-orbe-2"></div>
+    <div class="ch-conteudo container-padrao">
+      <nav class="ch-breadcrumb" aria-label="Localizacao na pagina">
+        <a href="index.html">Inicio</a>
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span>Fale Conosco</span>
+      </nav>
+      <div class="ch-etiqueta" role="note">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+        </svg>
+        Atendimento Especializado
+      </div>
+      <h1 class="ch-titulo">
+        Fale com a
+        <span class="destaque">
+          MSCREW
+          <svg height="6" viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 5 Q50 0 100 4 Q150 8 200 3" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </h1>
+      <p class="ch-subtitulo">
+        Estamos prontos para atender as demandas da sua operacao maritima. Entre em contato com nossa equipe de especialistas em crew management.
+      </p>
+    </div>
+  </section>
+
+  <!-- CORPO: INFORMACOES + FORMULARIO -->
+  <section class="scp" id="contato-principal" aria-label="Informacoes e formulario de contato">
+    <div class="container-padrao">
+      <div class="ctg">
+
+        <!-- COLUNA ESQUERDA: INFORMACOES -->
+        <div class="ci reveal">
+          <div class="ci-header">
+            <span class="ci-etiqueta">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              Canais de Atendimento
+            </span>
+            <h2 class="ci-titulo">Informacoes de Contato</h2>
+            <p class="ci-desc">Escolha o canal mais conveniente. Nossa equipe esta pronta para responder o mais breve possivel.</p>
+          </div>
+
+          <div class="ci-item" id="contact-rj">
+            <div class="ci-item-icone" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="ci-item-body">
+              <h3>Escritorio - Rio de Janeiro, RJ</h3>
+              <p>Av. Rio Branco, Centro<br>Rio de Janeiro - RJ, Brasil</p>
+              <span class="ci-detalhe">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+                +55 (21) 99999-9999
+              </span>
+            </div>
+          </div>
+
+          <div class="ci-item" id="contact-email">
+            <div class="ci-item-icone" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <div class="ci-item-body">
+              <h3>E-mail</h3>
+              <a href="mailto:contato@mscrew.com.br">contato@mscrew.com.br</a>
+            </div>
+          </div>
+
+          <div class="ci-item" id="contact-whatsapp">
+            <div class="ci-item-icone" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+              </svg>
+            </div>
+            <div class="ci-item-body">
+              <h3>WhatsApp</h3>
+              <a href="https://wa.me/5521999999999" target="_blank" rel="noopener noreferrer">+55 (21) 99999-9999</a>
+            </div>
+          </div>
+
+          <div class="ci-item" id="contact-horario">
+            <div class="ci-item-icone" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="ci-item-body">
+              <h3>Horario de Atendimento</h3>
+              <p>Segunda a Sexta: 08h as 18h<br>Plantao 24h para emergencias operacionais</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA: FORMULARIO -->
+        <div class="cfc reveal rd2">
+          <div class="cfc-header">
+            <h2>Envie sua Mensagem</h2>
+            <p>Preencha o formulario e nossa equipe retornara em breve.</p>
+          </div>
+          <form class="cf" id="formulario-contato" method="POST" action="#" enctype="multipart/form-data" onsubmit="handleSubmitContato(event)" novalidate>
+            <div class="fgd">
+              <div class="fg">
+                <label for="fc-nome" class="fl">Nome Completo <span class="ob">*</span></label>
+                <input type="text" id="fc-nome" name="nome" class="fi" placeholder="Seu nome completo" required autocomplete="name" />
+              </div>
+              <div class="fg">
+                <label for="fc-email" class="fl">E-mail <span class="ob">*</span></label>
+                <input type="email" id="fc-email" name="email" class="fi" placeholder="seunome@empresa.com.br" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="fgd">
+              <div class="fg">
+                <label for="fc-telefone" class="fl">Telefone / WhatsApp</label>
+                <input type="tel" id="fc-telefone" name="telefone" class="fi" placeholder="+55 (21) 99999-9999" autocomplete="tel" />
+              </div>
+              <div class="fg">
+                <label for="fc-assunto" class="fl">Motivo do Contato <span class="ob">*</span></label>
+                <select id="fc-assunto" name="assunto" class="fs" required>
+                  <option value="" disabled selected>Selecione o motivo...</option>
+                  <option value="armador">Sou Armador - Solicitar Tripulacao</option>
+                  <option value="vaga">Sou Maritimo - Enviar Curriculo</option>
+                  <option value="comercial">Proposta Comercial / Parceria</option>
+                  <option value="duvida">Duvidas Gerais</option>
+                  <option value="fornecedor">Fornecedores</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg">
+              <label for="fc-mensagem" class="fl">Mensagem <span class="ob">*</span></label>
+              <textarea id="fc-mensagem" name="mensagem" class="ft" placeholder="Descreva como podemos ajudar sua operacao maritima..." rows="5" required></textarea>
+            </div>
+            <div class="fu">
+              <svg class="fu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+              </svg>
+              <label for="fc-curriculo">
+                <span class="fu-txt" id="fu-texto">Anexe seu Curriculo (PDF) - opcional</span>
+                <span class="fu-size">Tamanho maximo: 5 MB</span>
+                <input id="fc-curriculo" name="curriculo" type="file" accept=".pdf" class="sr-only" />
+              </label>
+            </div>
+            <button type="submit" id="btn-enviar-contato" class="btn-submit">
+              Enviar Mensagem
+              <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+            <p class="f-aviso">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+              </svg>
+              Suas informacoes estao seguras. Nao compartilhamos seus dados.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="sm" id="mapa" aria-label="Localizacao da MSCREW">
+    <div class="container-padrao">
+      <div class="sm-header reveal">
+        <span class="sm-etiqueta">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Nossa Localizacao
+        </span>
+        <h2 class="sm-titulo">Onde Estamos</h2>
+      </div>
+    </div>
+    <div class="sm-map">
+      <iframe
+        id="mapa-google"
+        src="https://maps.google.com/maps?q=Av.+Rio+Branco%2C+Centro%2C+Rio+de+Janeiro&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="450" style="border:0;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localizacao da MSCREW - Av. Rio Branco, Rio de Janeiro"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- RODAPE -->
+  <div id="footer-placeholder"></div>
+  <script src="partials/load-footer.js"></script>
+
+  <script src="script.js" defer></script>
+  <script>
+    const revealEls = document.querySelectorAll(".reveal");
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    const inputCurriculo = document.getElementById("fc-curriculo");
+    const fuTexto = document.getElementById("fu-texto");
+    if (inputCurriculo) {
+      inputCurriculo.addEventListener("change", () => {
+        fuTexto.textContent = inputCurriculo.files.length > 0
+          ? "Curriculo selecionado: " + inputCurriculo.files[0].name
+          : "Anexe seu Curriculo (PDF) - opcional";
+      });
+    }
+
+    function handleSubmitContato(e) {
+      e.preventDefault();
+      const form = e.target;
+      if (!form.checkValidity()) { form.classList.add("form-enviado"); return; }
+      form.classList.add("form-enviado");
+      const btn = document.getElementById("btn-enviar-contato");
+      const orig = btn.innerHTML;
+      btn.innerHTML = "Mensagem Enviada!";
+      btn.style.pointerEvents = "none";
+      btn.style.background = "#059669";
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.style.pointerEvents = "";
+        btn.style.background = "";
+        form.reset();
+        form.classList.remove("form-enviado");
+        if (fuTexto) fuTexto.textContent = "Anexe seu Curriculo (PDF) - opcional";
+      }, 4500);
+    }
+  </script>
+</body>
+</html>

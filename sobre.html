@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Sobre Nós | MSCREW — Crew Management & Recrutamento Marítimo</title>
+  <meta name="description" content="Conheça a MS CREW Serviços Marítimos LTDA. Especialistas em recrutamento onshore e offshore, terceirização e consultoria para o setor naval e de óleo e gás." />
+  <meta name="keywords" content="sobre a MSCREW, empresa marítima, recrutamento offshore, terceirização marítima, valores MSCREW" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sobre Nós | MSCREW — Crew Management" />
+  <meta property="og:description" content="Profissionais altamente capacitados oferecendo serviços de ponta em RH Marítimo." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Estilos do index -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ======================================================
+       ESTILOS EXCLUSIVOS DA PÁGINA SOBRE
+       ====================================================== */
+
+    body.pagina-sobre {
+      background-color: var(--navy-900);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    /* ── HERO DA PÁGINA SOBRE ──────────────────────── */
+    .sobre-hero {
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 5rem;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(7,20,41,0.95) 0%, rgba(15,36,81,0.9) 50%, rgba(26,58,122,0.85) 100%),
+        url('./assets/fundo-hero.jpg') center/cover no-repeat;
+    }
+
+    .sobre-hero-fundo-pontilhado {
+      position: absolute; inset: 0; opacity: 0.04; pointer-events: none;
+      background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .sobre-hero-orbe-1 {
+      position: absolute; top: -6rem; right: -6rem; width: 450px; height: 450px;
+      background: rgba(43,92,184,0.2); filter: blur(80px); border-radius: 50%; pointer-events: none;
+    }
+    .sobre-hero-orbe-2 {
+      position: absolute; bottom: 0; left: -4rem; width: 300px; height: 300px;
+      background: rgba(26,58,122,0.3); filter: blur(80px); border-radius: 50%; pointer-events: none;
+    }
+
+    .sobre-hero-conteudo {
+      position: relative; z-index: 10;
+      padding-top: 9rem;
+      width: 100%;
+    }
+
+    .sobre-hero-etiqueta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.1); backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 9999px;
+      padding: 0.375rem 1rem; margin-bottom: 1.5rem;
+      font-size: 0.75rem; font-weight: 600; color: var(--gray-200);
+      letter-spacing: 0.05em; text-transform: uppercase;
+      animation: fadeInDown 0.6s ease-out forwards; animation-delay: 0.1s; opacity: 0;
+    }
+    .sobre-hero-etiqueta svg { width: 14px; height: 14px; color: var(--gold-400); }
+
+    .sobre-hero-titulo {
+      font-size: 2.5rem; font-weight: 900; color: var(--white);
+      line-height: 1.07; letter-spacing: -0.025em; max-width: 50rem;
+      margin-bottom: 1.25rem;
+      animation: fadeInDown 0.6s ease-out forwards; animation-delay: 0.2s; opacity: 0;
+    }
+    @media (min-width: 640px)  { .sobre-hero-titulo { font-size: 3.25rem; } }
+    @media (min-width: 1024px) { .sobre-hero-titulo { font-size: 3.75rem; } }
+
+    .sobre-hero-titulo .destaque {
+      position: relative; display: inline-block; color: var(--gold-400);
+    }
+    .sobre-hero-titulo .destaque svg {
+      position: absolute; bottom: -0.55rem; left: 0; width: 100%; display: block;
+    }
+
+    /* ── BREADCRUMB ─────────────────────────────────────── */
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; color: var(--gray-400);
+      margin-bottom: 2rem;
+      animation: fadeInDown 0.6s ease-out forwards; animation-delay: 0.05s; opacity: 0;
+    }
+    .breadcrumb a { color: var(--gray-300); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold-400); }
+    .breadcrumb svg { width: 12px; height: 12px; opacity: 0.5; }
+
+    /* ── HISTÓRIA DA EMPRESA ────────────────────────────── */
+    .secao-historia {
+      padding: 5rem 0;
+      background: var(--white);
+      color: var(--navy-900);
+    }
+    .historia-conteudo {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .historia-conteudo { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    }
+    
+    .historia-texto h2 {
+      font-size: 2.25rem; font-weight: 800; color: var(--navy-900); margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    .historia-texto p {
+      font-size: 1.05rem; color: var(--gray-600); margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+    .historia-texto p:last-child { margin-bottom: 0; }
+    
+    /* Destaque visual ao lado do texto */
+    .historia-imagem {
+      position: relative;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(7, 20, 41, 0.1);
+    }
+    .historia-imagem img {
+      width: 100%; height: auto; display: block;
+    }
+    .historia-imagem::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(7, 20, 41, 0.4), transparent);
+    }
+
+    /* ── MISSÃO E VISÃO ─────────────────────────────────── */
+    .secao-mv {
+      padding: 5rem 0;
+      background: var(--navy-50);
+    }
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      .mv-grid { grid-template-columns: 1fr 1fr; }
+    }
+    
+    .mv-card {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 10px 25px rgba(7, 20, 41, 0.05);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .mv-card:hover { transform: translateY(-5px); }
+    
+    .mv-card::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+      background: var(--gold-400);
+    }
+    
+    .mv-icone {
+      width: 4rem; height: 4rem; border-radius: 50%;
+      background: var(--navy-50); color: var(--gold-400);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .mv-card h3 {
+      font-size: 1.5rem; font-weight: 800; color: var(--navy-900); margin-bottom: 1rem;
+    }
+    .mv-card p {
+      font-size: 1.05rem; color: var(--gray-600); line-height: 1.6;
+    }
+
+    /* ── VALORES ────────────────────────────────────────── */
+    .secao-valores {
+      padding: 6rem 0;
+      background: var(--navy-900);
+      position: relative;
+    }
+    .secao-valores::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    }
+
+    .valores-header {
+      text-align: center; max-width: 800px; margin: 0 auto 4rem;
+    }
+    .valores-header h2 {
+      font-size: 2.5rem; font-weight: 800; color: var(--white); margin-bottom: 1rem;
+    }
+    .valores-header p {
+      font-size: 1.1rem; color: var(--gray-300);
+    }
+
+    .valores-grid {
+      display: grid; grid-template-columns: 1fr; gap: 2rem;
+    }
+    @media (min-width: 768px) { .valores-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .valores-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .valor-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    .valor-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .valor-card h4 {
+      font-size: 1.25rem; font-weight: 700; color: var(--gold-400);
+      margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .valor-card ul {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .valor-card ul li {
+      position: relative; padding-left: 1.25rem; margin-bottom: 0.75rem;
+      font-size: 0.95rem; color: var(--gray-300);
+    }
+    .valor-card ul li::before {
+      content: '•'; position: absolute; left: 0; color: var(--gold-400); font-weight: bold;
+    }
+    .valor-card p {
+      font-size: 0.95rem; color: var(--gray-300); margin-bottom: 0.75rem;
+    }
+
+  </style>
+</head>
+
+<body class="pagina-sobre">
+
+  <!-- ============================================================
+       CABEÇALHO
+       ============================================================ -->
+  <div id="header-placeholder"></div>
+  <script src="partials/load-header.js"></script>
+  <!-- /CABEÇALHO -->
+
+
+  <!-- ============================================================
+       SEÇÃO 1 — HERO
+       ============================================================ -->
+  <section class="sobre-hero" aria-label="Sobre a MSCREW">
+    <div class="sobre-hero-fundo-pontilhado"></div>
+    <div class="sobre-hero-orbe-1"></div>
+    <div class="sobre-hero-orbe-2"></div>
+
+    <div class="sobre-hero-conteudo container-padrao">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Localização na página">
+        <a href="index.html">Início</a>
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span>Sobre Nós</span>
+      </nav>
+
+      <!-- Etiqueta -->
+      <div class="sobre-hero-etiqueta" role="note">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        A Empresa
+      </div>
+
+      <!-- H1 -->
+      <h1 class="sobre-hero-titulo">
+        Conheça a 
+        <span class="destaque">
+          MS CREW
+          <svg height="6" viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 5 Q50 0 100 4 Q150 8 200 3" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </h1>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 2 — HISTÓRIA (SOBRE NÓS)
+       ============================================================ -->
+  <section class="secao-historia">
+    <div class="container-padrao">
+      <div class="historia-conteudo">
+        
+        <div class="historia-texto reveal">
+          <h2>Especialistas em Recursos Humanos para os Setores Naval e de Óleo e Gás</h2>
+          
+          <p>A <strong>MS CREW SERVIÇOS MARÍTIMOS LTDA.</strong> entrou no mercado com profissionais altamente capacitados oferecendo serviços de ponta, utilizando novos modelos de gestão para dar suporte ao setor naval. Oferecemos aos nossos clientes modernos sistemas de consultoria, suprindo com agilidade e eficiência sua demanda de Recursos Humanos.</p>
+          
+          <p>Somos uma empresa especializada no trabalho <em>onshore</em> e <em>offshore</em>, focada na terceirização e consultoria de tripulação e staff para operação de barcos de apoio, mergulho, sísmico, navios de cabotagem e de produção para a área naval, indústria, petróleo e gás.</p>
+
+          <p>Com o crescimento da economia e o aquecimento do mercado offshore, surgiu a necessidade de se buscar profissionais capacitados com rapidez, o que frequentemente resultava em grandes filas nos departamentos de RH e perda de tempo por parte dos recrutadores.</p>
+
+          <p>Para solucionar esse desafio, possuímos um sólido <strong>“BANCO DE DADOS”</strong> com currículos de candidatos qualificados, previamente selecionados e arquivados por categoria e funções. Dessa forma, conseguimos recrutar, dentro do menor tempo possível, o profissional exato que a sua operação exige.</p>
+        </div>
+
+        <div class="historia-imagem reveal reveal-delay-1">
+          <!-- Placeholder de imagem de uma embarcação / plataforma / equipe -->
+          <img src="assets/about-us-img.jfif" alt="Embarcação Offshore da MSCREW" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 3 — MISSÃO E VISÃO
+       ============================================================ -->
+  <section class="secao-mv">
+    <div class="container-padrao">
+      <div class="mv-grid">
+        
+        <!-- Missão -->
+        <div class="mv-card reveal">
+          <div class="mv-icone">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="32" height="32">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+            </svg>
+          </div>
+          <h3>Missão</h3>
+          <p>Oferecer serviços diferenciados destinados a contribuir com a melhoria contínua da produtividade dos nossos clientes, respeitando o indivíduo, a sociedade e o meio ambiente.</p>
+        </div>
+
+        <!-- Visão -->
+        <div class="mv-card reveal reveal-delay-1">
+          <div class="mv-icone">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="32" height="32">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3>Visão</h3>
+          <p>Ser a melhor empresa do mercado em nossos segmentos de atuação, reconhecida pelas soluções eficazes e inovadoras, por meio de princípios sustentáveis.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 4 — VALORES
+       ============================================================ -->
+  <section class="secao-valores">
+    <div class="container-padrao">
+      <div class="valores-header reveal">
+        <h2>Nossos Valores</h2>
+        <p>Os princípios que guiam nossa excelência operacional e conduta corporativa.</p>
+      </div>
+
+      <div class="valores-grid">
+        
+        <!-- Valor 1 -->
+        <div class="valor-card reveal">
+          <h4>Foco no Cliente</h4>
+          <p>Criar excelentes soluções inovadoras para nossos clientes, ouvindo atentamente suas necessidades e excedendo suas expectativas.</p>
+        </div>
+
+        <!-- Valor 2 -->
+        <div class="valor-card reveal">
+          <h4>Agregar Valor</h4>
+          <ul>
+            <li>Administrar o negócio para oferecer retorno superior aos clientes.</li>
+            <li>Alcançar crescimento lucrativo.</li>
+            <li>Mais do que entregar alta qualidade em serviços, queremos ser reconhecidos por isso.</li>
+            <li>Top na qualidade percebida pelo cliente.</li>
+          </ul>
+        </div>
+
+        <!-- Valor 3 -->
+        <div class="valor-card reveal">
+          <h4>Dimensões Humanas</h4>
+          <ul>
+            <li>Desenvolvemos colaboradores altamente motivados e treinados em nosso segmento.</li>
+            <li>Desenvolver as habilidades e qualificações dos colaboradores, nosso maior atrativo.</li>
+            <li>Vantagem competitiva por meio da agilidade, qualidade e inovação.</li>
+            <li>Ser o empregador preferido do nosso segmento.</li>
+          </ul>
+        </div>
+
+        <!-- Valor 4 -->
+        <div class="valor-card reveal">
+          <h4>Padrões Éticos</h4>
+          <p>Agimos de maneira ética como bons cidadãos corporativos em todas as comunidades nas quais atuamos. Defendemos a saúde do meio ambiente e o progresso social.</p>
+        </div>
+
+        <!-- Valor 5 -->
+        <div class="valor-card reveal">
+          <h4>Valores da Marca</h4>
+          <ul>
+            <li>Construir uma empresa vencedora e diferenciada diariamente nos mercados de Consultoria e Terceirização.</li>
+            <li>Reconhecemos a tradição e o valor da marca, a fidelidade dos clientes e a competência por meio da sinergia da nossa equipe.</li>
+          </ul>
+        </div>
+
+        <!-- Valor 6 -->
+        <div class="valor-card reveal">
+          <h4>Responsabilidade Social</h4>
+          <ul>
+            <li>A responsabilidade social faz parte do nosso modelo de gestão.</li>
+            <li>Pequenas ações trazem grandes resultados para a comunidade.</li>
+            <li>Incorporamos no planejamento os interesses de colaboradores, fornecedores, comunidade e governo.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       RODAPÉ
+       ============================================================ -->
+  <div id="footer-placeholder"></div>
+  <script src="partials/load-footer.js"></script>
+  <!-- /RODAPÉ -->
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <!-- Reutiliza o script.js do index para header sticky + menu mobile -->
+  <script src="script.js" defer></script>
+
+  <script>
+    // ── Scroll Reveal ──────────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => revealObs.observe(el));
+  </script>
+
+</body>
+</html>
