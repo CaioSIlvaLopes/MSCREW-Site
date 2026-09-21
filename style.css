@@ -197,7 +197,7 @@ button, input, select, textarea {
   position: relative;
 }
 .header-scrolled .link-navegacao {
-  color: var(--gray-950);
+  color: var(--gray-900);
 }
 .link-navegacao:hover { color: var(--gold-400); }
 .header-scrolled .link-navegacao:hover { color: var(--navy-900); }
@@ -254,7 +254,7 @@ button, input, select, textarea {
   transition: all 0.3s ease;
 }
 .linha-hamburguer:nth-child(3) { width: 1rem; }
-.header-scrolled .linha-hamburguer { background-color: var(--gray-950); }
+.header-scrolled .linha-hamburguer { background-color: var(--gray-900); }
 
 /* Menu Mobile Container */
 #menu-mobile-container {
@@ -948,7 +948,7 @@ button, input, select, textarea {
   color: var(--white);
 }
 .header-scrolled .botoes-desktop .btn-idioma {
-  color: var(--gray-950);
+  color: var(--gray-900);
 }
 .botoes-desktop .btn-idioma:hover {
   color: var(--gold-400);
