@@ -353,6 +353,8 @@
       </div>
     </div>
   </section>
+
+
   <!-- ============================================================
        SEÇÃO 6 — PORTAL DO TRIPULANTE (VAGAS)
        ============================================================ -->
@@ -412,69 +414,36 @@
   </section>
 
   <!-- ============================================================
-       SEÇÃO 7 — FORMULÁRIO DE CONTATO
+       SEÇÃO 7 — CTA CONTATO
        ============================================================ -->
-  <section id="contato" class="secao-contato">
-    <div class="container-formulario">
-      
-      <div class="cabecalho-contato reveal">
-        <h2 class="titulo-contato">Fale Conosco</h2>
-        <p class="subtitulo-contato">Envie sua mensagem, solicite um orçamento ou cadastre seu currículo.</p>
-      </div>
+  <section id="contato" class="secao-cta-contato">
+    <div class="container-padrao">
+      <div class="cta-contato-inner reveal">
 
-      <div id="formulario" class="caixa-formulario reveal">
-        <!-- Substituir o atributo action pelo endpoint do Formspree ou PHP -->
-        <form action="#" method="POST" enctype="multipart/form-data" class="formulario-html">
-          
-          <div class="linha-inputs">
-            <div class="grupo-input">
-              <label for="nome" class="rotulo">Nome Completo</label>
-              <input type="text" id="nome" name="nome" class="campo-texto" required>
-            </div>
-            <div class="grupo-input">
-              <label for="email" class="rotulo">E-mail</label>
-              <input type="email" id="email" name="email" class="campo-texto" required>
-            </div>
-          </div>
+        <!-- Ícone decorativo -->
+        <div class="cta-contato-icone" aria-hidden="true">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="40" height="40">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+          </svg>
+        </div>
 
-          <div class="linha-inputs">
-            <div class="grupo-input">
-              <label for="telefone" class="rotulo">Telefone / WhatsApp</label>
-              <input type="tel" id="telefone" name="telefone" class="campo-texto">
-            </div>
-            <div class="grupo-input">
-              <label for="assunto" class="rotulo">Assunto</label>
-              <select id="assunto" name="assunto" class="campo-select" required>
-                <option value="" disabled selected>Selecione uma opção...</option>
-                <option value="armador">Sou Armador - Solicitar Tripulação</option>
-                <option value="vaga">Sou Marítimo - Enviar Currículo</option>
-                <option value="duvida">Dúvidas Gerais</option>
-              </select>
-            </div>
-          </div>
+        <div class="cta-contato-texto">
+          <h2 class="cta-contato-titulo">Vamos conversar?</h2>
+          <p class="cta-contato-subtitulo">Seja para solicitar tripulação, enviar seu currículo ou tirar dúvidas — nossa equipe está pronta para te atender.</p>
+        </div>
 
-          <div class="grupo-input">
-            <label for="mensagem" class="rotulo">Mensagem (Opcional)</label>
-            <textarea id="mensagem" name="mensagem" rows="4" class="campo-textarea"></textarea>
-          </div>
+        <div class="cta-contato-acoes">
+          <a href="contato.html" id="botao-cta-contato-principal" class="cta-btn-principal">
+            Fale Conosco
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18" height="18">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+          <a href="contato.html#formulario" id="botao-cta-contato-secundario" class="cta-btn-secundario">
+            Enviar Currículo
+          </a>
+        </div>
 
-          <!-- Upload de Currículo (PDF) -->
-          <div class="area-upload">
-            <svg class="icone-upload" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-            <label for="curriculo" class="rotulo-upload">
-              <span class="texto-upload">Anexe seu Currículo (PDF)</span>
-              <span class="tamanho-upload">Tamanho máximo: 5MB</span>
-              <input id="curriculo" name="curriculo" type="file" accept=".pdf" class="sr-only">
-            </label>
-          </div>
-
-          <div class="area-botao">
-            <button type="submit" id="botao-enviar-formulario" class="botao-enviar">
-              Enviar Mensagem
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </button>
-          </div>
-        </form>
       </div>
     </div>
   </section>

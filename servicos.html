@@ -220,9 +220,15 @@
 
     /* ── GRID DE SERVIÇOS (BENTO STYLE) ─────────────────── */
     .secao-servicos-grid {
-      padding: 6rem 0 10rem;
-      background: var(--navy-950);
+      padding: 6rem 0;
+      background: #ffffff;
       position: relative;
+    }
+
+    /* ── SEÇÃO CTA ──────────────────────────────────────── */
+    .secao-servicos-cta {
+      background: #ffffff;
+      padding: 6rem 0;
     }
 
     .secao-servicos-grid::before {
@@ -232,7 +238,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
     }
 
     .servicos-grid {
@@ -250,17 +256,17 @@
 
     @media (min-width: 1024px) {
       .servicos-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
       }
     }
 
     /* Glassmorphism Cards */
     .servico-card-static {
-      background: rgba(255, 255, 255, 0.02);
+      background: #ffffff;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.08);
       border-radius: 1.5rem;
       padding: 0;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -270,7 +276,7 @@
       position: relative;
       overflow: hidden;
       height: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
 
     .servico-card-imagem {
@@ -300,6 +306,7 @@
     }
 
     .servico-card-conteudo {
+      background-color: var(--navy-950);
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -336,10 +343,10 @@
     }
 
     .servico-card-static:hover {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(255, 122, 51, 0.3);
+      background: #ffffff;
+      border-color: rgba(255, 122, 51, 0.4);
       transform: translateY(-8px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 122, 51, 0.15);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12), 0 0 20px rgba(255, 122, 51, 0.15);
     }
 
     .servico-card-static:hover::before {
@@ -383,7 +390,7 @@
     .servico-card-static h3 {
       font-size: 1rem;
       font-weight: 800;
-      color: var(--white);
+      color: white;
       margin-bottom: 1rem;
       line-height: 1.3;
       transition: color 0.3s ease;
@@ -395,7 +402,7 @@
 
     .servico-card-static p {
       font-size: 0.85rem;
-      color: var(--gray-300);
+      color: white;
       line-height: 1.6;
       margin-bottom: 1.5rem;
       font-weight: 400;
@@ -407,7 +414,7 @@
       align-items: center;
       justify-content: space-between;
       margin-top: auto;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-top: 1px solid rgba(0, 0, 0, 0.07);
       padding-top: 1.25rem;
     }
 
@@ -437,7 +444,7 @@
 
     /* ── CTA SERVIÇOS ───────────────────────────────────── */
     .servicos-cta {
-      margin-top: 6rem;
+      margin-top: 0;
       text-align: center;
       padding: 5rem 3rem;
       background: linear-gradient(135deg, rgba(255, 122, 51, 0.1) 0%, rgba(26, 58, 122, 0.4) 100%);
@@ -499,6 +506,174 @@
     .reveal-delay-2 {
       transition-delay: 0.3s !important;
     }
+
+    /* ── BANNER SERVIÇOS ────────────────────────────────── */
+    .secao-servicos-banner {
+      background: var(--navy-950);
+      padding: 6rem 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .servicos-banner-container {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    }
+
+    @media (min-width: 1024px) {
+      .servicos-banner-container {
+        flex-direction: row;
+      }
+    }
+
+    /* Imagem 60% */
+    .servicos-banner-imagem {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+    }
+
+    @media (min-width: 1024px) {
+      .servicos-banner-imagem { width: 60%; min-height: 480px; }
+    }
+
+    .servicos-banner-imagem img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .servicos-banner-container:hover .servicos-banner-imagem img {
+      transform: scale(1.04);
+    }
+
+    .servicos-banner-imagem-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7,20,41,0.7) 0%, transparent 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+
+    .servicos-banner-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(230,92,0,0.85);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* Texto 40% */
+    .servicos-banner-texto {
+      width: 100%;
+      background: rgba(255,255,255,0.02);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+      border-left: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (min-width: 1024px) {
+      .servicos-banner-texto {
+        width: 40%;
+        padding: 3.5rem 3rem;
+      }
+    }
+
+    .servicos-banner-etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+    }
+
+    .servicos-banner-etiqueta-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--gold-400);
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    .servicos-banner-titulo {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    @media (min-width: 1024px) {
+      .servicos-banner-titulo { font-size: 1.9rem; }
+    }
+
+    .servicos-banner-itens {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .servicos-banner-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .servicos-banner-item-icone {
+      width: 2.5rem;
+      height: 2.5rem;
+      min-width: 2.5rem;
+      border-radius: 0.625rem;
+      background: rgba(230,92,0,0.12);
+      border: 1px solid rgba(230,92,0,0.25);
+      color: var(--gold-400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .servicos-banner-item:hover .servicos-banner-item-icone {
+      background: rgba(230,92,0,0.25);
+      border-color: var(--gold-400);
+    }
+
+    .servicos-banner-item strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .servicos-banner-item p {
+      font-size: 0.875rem;
+      color: var(--gray-400);
+      line-height: 1.6;
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -559,7 +734,6 @@
 
     </div>
   </section>
-
 
   <!-- ============================================================
        SEÇÃO 2 — GRID DE SERVIÇOS
@@ -649,8 +823,81 @@
         </div>
       </div>
 
-      <!-- CTA -->
-      <div class="servicos-cta reveal">
+    </div>
+  </section>
+<!-- ============================================================
+       SEÇÃO 3 — BANNER SERVIÇOS
+       ============================================================ -->
+  <section class="secao-servicos-banner">
+    <div class="container-padrao">
+      <div class="servicos-banner-container reveal">
+
+        <!-- Coluna imagem (60%) -->
+        <div class="servicos-banner-imagem">
+          <img src="assets/banner-global.jpg" alt="Equipe MS CREW em operação offshore">
+          <div class="servicos-banner-imagem-overlay">
+            <span class="servicos-banner-badge">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              Excelência Operacional
+            </span>
+          </div>
+        </div>
+
+        <!-- Coluna texto (40%) -->
+        <div class="servicos-banner-texto">
+
+          <div class="servicos-banner-etiqueta">
+            <span class="servicos-banner-etiqueta-dot"></span>
+            Nossos Diferenciais
+          </div>
+
+          <h2 class="servicos-banner-titulo">
+            Soluções completas para a sua operação
+          </h2>
+
+          <div class="servicos-banner-itens">
+            <div class="servicos-banner-item">
+              <div class="servicos-banner-item-icone">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <strong>Terceirização e Recrutamento</strong>
+                <p>Da triagem ao embarque — gerenciamos todo o ciclo de vida do profissional marítimo, onshore e offshore.</p>
+              </div>
+            </div>
+
+            <div class="servicos-banner-item">
+              <div class="servicos-banner-item-icone">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <div>
+                <strong>Folha de Pagamento e DP</strong>
+                <p>Processamento completo com total conformidade às obrigações trabalhistas, previdenciárias e fiscais.</p>
+              </div>
+            </div>
+
+            <div class="servicos-banner-item">
+              <div class="servicos-banner-item-icone">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <strong>Logística e Benefícios</strong>
+                <p>Suporte logístico integrado e gestão de benefícios para garantir eficiência e bem-estar da sua tripulação.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 4 — CTA
+       ============================================================ -->
+  <section class="secao-servicos-cta" aria-label="Solicitar orçamento">
+    <div class="container-padrao">
+      <div class="servicos-cta reveal" style="background-color: var(--navy-950);">
         <h2>Pronto para otimizar sua operação?</h2>
         <p>Conte com a expertise da MSCREW para fornecer a melhor mão de obra marítima e soluções operacionais para o
           seu negócio.</p>
@@ -663,7 +910,6 @@
           </svg>
         </a>
       </div>
-
     </div>
   </section>
 
