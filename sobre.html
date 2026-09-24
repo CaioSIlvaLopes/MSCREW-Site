@@ -20,6 +20,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
+  <!-- Otimizações Lighthouse (LCP e FOUC) -->
+  <link rel="preload" as="image" href="assets/fundo-hero.jpg" fetchpriority="high" />
+
   <!-- Estilos do index -->
   <link rel="stylesheet" href="style.css" />
   <!-- Estilos exclusivos da página Sobre -->
@@ -99,7 +102,7 @@
 
         <div class="historia-imagem reveal reveal-delay-1">
           <!-- Placeholder de imagem de uma embarcação / plataforma / equipe -->
-          <img src="assets/about-us-img.jfif" alt="Embarcação Offshore da MSCREW" />
+          <img src="assets/about-us-img.jfif" alt="Embarcação Offshore da MSCREW" loading="lazy" decoding="async" width="800" height="600" />
         </div>
 
       </div>

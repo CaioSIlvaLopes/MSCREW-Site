@@ -24,6 +24,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
 
+  <!-- Otimizações Lighthouse (LCP e FOUC) -->
+  <link rel="preload" as="image" href="assets/fundo-hero.jpg" fetchpriority="high" />
+
   <!-- Estilos globais -->
   <link rel="stylesheet" href="style.css" />
   <!-- Estilos exclusivos da página Serviços -->
@@ -98,7 +101,7 @@
         <!-- CARD 1 -->
         <div class="servico-card-static reveal">
           <div class="servico-card__imagem">
-            <img src="assets/terceirizacao-clt.jpg" alt="Terceirização de Mão de Obra - Regime CLT">
+            <img src="assets/terceirizacao-clt.jpg" alt="Terceirização de Mão de Obra - Regime CLT" loading="lazy" decoding="async" width="800" height="600">
           </div>
           <div class="servico-card__conteudo">
             <h3>TERCEIRIZAÇÃO DE MÃO DE OBRA - REGIME CLT</h3>
@@ -118,7 +121,7 @@
         <!-- CARD 2 -->
         <div class="servico-card-static reveal reveal-delay-1">
           <div class="servico-card__imagem">
-            <img src="assets/recrutamento.jpg" alt="Recrutamento e Seleção de Pessoal Marítimo">
+            <img src="assets/recrutamento.jpg" alt="Recrutamento e Seleção de Pessoal Marítimo" loading="lazy" decoding="async" width="800" height="600">
           </div>
           <div class="servico-card__conteudo">
             <h3>RECRUTAMENTO E SELEÇÃO DE PESSOAL ONSHORE E OFFSHORE</h3>
@@ -138,7 +141,7 @@
         <!-- CARD 3 -->
         <div class="servico-card-static reveal reveal-delay-2">
           <div class="servico-card__imagem">
-            <img src="assets/folha-pagto.jpg" alt="Folha de Pagamento Computadorizada">
+            <img src="assets/folha-pagto.jpg" alt="Folha de Pagamento Computadorizada" loading="lazy" decoding="async" width="800" height="600">
           </div>
           <div class="servico-card__conteudo">
             <h3>FOLHA DE PAGTO COMPUTADORIZADA</h3>
@@ -158,7 +161,7 @@
         <!-- CARD 4 -->
         <div class="servico-card-static reveal">
           <div class="servico-card__imagem">
-            <img src="assets/logistica.jpg" alt="Logística Marítima e Portuária">
+            <img src="assets/logistica.jpg" alt="Logística Marítima e Portuária" loading="lazy" decoding="async" width="800" height="600">
           </div>
           <div class="servico-card__conteudo">
             <h3>LOGÍSTICA</h3>
@@ -188,7 +191,7 @@
 
         <!-- Coluna imagem (60%) -->
         <div class="servicos-banner__imagem">
-          <img src="assets/banner-global.jpg" alt="Equipe MS CREW em operação offshore">
+          <img src="assets/banner-global.jpg" alt="Equipe MS CREW em operação offshore" loading="lazy" decoding="async" width="1200" height="800">
           <div class="servicos-banner__imagem-overlay">
             <span class="servicos-banner__badge">
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>

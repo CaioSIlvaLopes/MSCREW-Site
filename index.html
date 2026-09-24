@@ -20,6 +20,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
+  <!-- Otimizações Lighthouse (LCP e FOUC) -->
+  <link rel="preload" as="image" href="assets/fundo-hero.jpg" fetchpriority="high" />
+
   <!-- Estilos customizados (Vanilla CSS) -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -327,8 +330,7 @@
         
         <div class="imagem-sobre reveal">
           <div class="moldura-imagem">
-            <img src="assets/sobre-nos-home.jpg" alt="Sobre a MSCREW">
-            
+            <img src="assets/sobre-nos-home.jpg" alt="Sobre a MSCREW" loading="lazy" decoding="async" width="800" height="600">
           </div>
         </div>
 
