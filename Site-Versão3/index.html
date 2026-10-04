@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>MS CREW | Soluções Globais em Tripulação e Gestão Aquaviária</title>
+  <meta name="description" content="MS CREW Serviços Marítimos: tripulação para Offshore (PSV, AHTS, OSRV), Cabotagem e Longo Curso e Navegação Interior. Crew management, recrutamento e gestão aquaviária." />
+  <meta name="keywords" content="crew management, tripulação offshore, PSV, AHTS, OSRV, cabotagem, longo curso, fluviários, navegação interior, recrutamento marítimo" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#004b87" />
+  <link rel="canonical" href="https://www.mscrew.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MS CREW | Soluções Globais em Tripulação e Gestão Aquaviária" />
+  <meta property="og:description" content="Tripulação qualificada para Offshore, Cabotagem, Longo Curso e Navegação Interior." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/navio-offshore.jpg" />
+
+  <link rel="icon" type="image/png" href="assets/logo-mscrew-color.png" />
+
+  <!-- Flag de JS (habilita animações progressivas) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Tipografia: Montserrat Black (títulos) + Open Sans (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- LCP -->
+  <link rel="preload" as="image" href="assets/navio-offshore.jpg" fetchpriority="high" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+
+  <div id="header-placeholder"></div>
+  <script src="partials/load-header.js"></script>
+
+  <main id="conteudo">
+
+    <!-- ==================================================================
+         HERO SLIDER
+         ================================================================== -->
+    <section class="hero" id="inicio" data-hero aria-roledescription="carrossel" aria-label="Destaques da MS CREW">
+
+      <div class="hero__slides">
+        <div class="hero__slide hero__slide--active" role="group" aria-roledescription="slide" aria-label="1 de 3: Offshore">
+          <img class="hero__image" src="assets/navio-offshore.jpg" alt="Navio de apoio offshore (PSV) navegando próximo a uma plataforma de produção de petróleo" width="1376" height="768" fetchpriority="high" />
+        </div>
+        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="2 de 3: Cabotagem e Longo Curso" aria-hidden="true">
+          <img class="hero__image" src="assets/navio-mercante.jpg" alt="Navio porta-contêineres de longo curso navegando em mar aberto" width="1376" height="768" loading="lazy" />
+        </div>
+        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="3 de 3: Navegação Interior" aria-hidden="true">
+          <img class="hero__image" src="assets/empurrador-fluvial.jpg" alt="Empurrador conduzindo comboio de barcaças graneleiras em rio da Amazônia" width="1376" height="768" loading="lazy" />
+        </div>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">
+            <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+            Crew Management · Brasil e exterior
+          </p>
+
+          <h1 class="hero__title">
+            Soluções Globais em <span class="hero__title-accent">Tripulação</span> e Gestão Aquaviária
+          </h1>
+
+          <div class="hero__captions" aria-live="polite">
+            <p class="hero__caption hero__caption--active">
+              <strong class="hero__caption-label">Offshore</strong>
+              Tripulações completas para PSVs, AHTSs, OSRVs e plataformas — com salvatagem e HUET válidos.
+            </p>
+            <p class="hero__caption">
+              <strong class="hero__caption-label">Cabotagem e Longo Curso</strong>
+              Oficiais de Convés e Máquinas para porta-contêineres, petroleiros e graneleiros.
+            </p>
+            <p class="hero__caption">
+              <strong class="hero__caption-label">Navegação Interior</strong>
+              Comandantes e Marinheiros Fluviais para comboios na Amazônia e na Hidrovia Tietê-Paraná.
+            </p>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--light btn--lg" href="contato.html?perfil=armador#formulario">
+              Solicitar Tripulação
+              <svg class="btn__icon btn__icon--end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--outline-light btn--lg" href="trabalhe-conosco.html">Sou Marítimo</a>
+          </div>
+        </div>
+
+        <div class="hero__controls">
+          <button class="hero__arrow" type="button" data-hero-prev aria-label="Destaque anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+
+          <div class="hero__dots" role="group" aria-label="Selecionar destaque">
+            <button class="hero__dot hero__dot--active" type="button" aria-current="true" aria-label="Destaque 1: Offshore">
+              <span class="hero__dot-label">Offshore</span>
+              <span class="hero__dot-progress" aria-hidden="true"></span>
+            </button>
+            <button class="hero__dot" type="button" aria-label="Destaque 2: Cabotagem e Longo Curso">
+              <span class="hero__dot-label">Cabotagem</span>
+              <span class="hero__dot-progress" aria-hidden="true"></span>
+            </button>
+            <button class="hero__dot" type="button" aria-label="Destaque 3: Navegação Interior">
+              <span class="hero__dot-label">Interior</span>
+              <span class="hero__dot-progress" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <button class="hero__arrow" type="button" data-hero-next aria-label="Próximo destaque">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         BLOCOS DE NAVEGAÇÃO RÁPIDA (SEGMENTOS)
+         ================================================================== -->
+    <section class="segments" id="segmentos" aria-labelledby="segmentos-titulo">
+      <div class="container">
+        <h2 class="u-visually-hidden" id="segmentos-titulo">Escolha o seu segmento de navegação</h2>
+
+        <div class="segments__grid">
+
+          <!-- Bloco 1 — Offshore -->
+          <article class="segment-card segment-card--offshore reveal">
+            <div class="segment-card__media">
+              <img class="segment-card__image" src="assets/navio-offshore.jpg" alt="Navio de apoio offshore (PSV) em operação próximo a plataforma de petróleo" width="1376" height="768" loading="lazy" decoding="async" />
+              <span class="segment-card__badge">01 · Apoio Marítimo</span>
+            </div>
+            <div class="segment-card__body">
+              <h3 class="segment-card__title">Offshore</h3>
+              <p class="segment-card__text">
+                Tripulação completa para <strong>PSVs, AHTSs, OSRVs</strong> e plataformas de produção e perfuração.
+              </p>
+              <ul class="segment-card__tags" aria-label="Embarcações atendidas">
+                <li class="segment-card__tag">PSV</li>
+                <li class="segment-card__tag">AHTS</li>
+                <li class="segment-card__tag">OSRV</li>
+                <li class="segment-card__tag">Plataformas</li>
+              </ul>
+              <p class="segment-card__highlight">
+                <svg class="segment-card__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>Profissionais com cursos de <strong>salvatagem</strong> e <strong>HUET válidos</strong>, prontos para o embarque.</span>
+              </p>
+              <div class="segment-card__actions">
+                <a class="btn btn--primary btn--block" href="contato.html?perfil=armador&amp;segmento=offshore#formulario">Solicitar tripulação offshore</a>
+                <a class="link-arrow" href="trabalhe-conosco.html?mercado=offshore">
+                  Sou marítimo offshore
+                  <svg class="link-arrow__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloco 2 — Cabotagem e Longo Curso -->
+          <article class="segment-card segment-card--cabotagem reveal reveal--delay-1">
+            <div class="segment-card__media">
+              <img class="segment-card__image" src="assets/navio-mercante.jpg" alt="Navio mercante porta-contêineres navegando em mar aberto" width="1376" height="768" loading="lazy" decoding="async" />
+              <span class="segment-card__badge">02 · Marinha Mercante</span>
+            </div>
+            <div class="segment-card__body">
+              <h3 class="segment-card__title">Cabotagem e Longo Curso</h3>
+              <p class="segment-card__text">
+                Oficiais de Marinha Mercante das categorias de <strong>Convés e Máquinas</strong> para navegação costeira e internacional.
+              </p>
+              <ul class="segment-card__tags" aria-label="Embarcações atendidas">
+                <li class="segment-card__tag">Porta-contêineres</li>
+                <li class="segment-card__tag">Petroleiros</li>
+                <li class="segment-card__tag">Graneleiros</li>
+              </ul>
+              <p class="segment-card__highlight">
+                <svg class="segment-card__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></svg>
+                <span>Oficiais de Náutica e de Máquinas com <strong>Certificados de Competência STCW</strong> em dia.</span>
+              </p>
+              <div class="segment-card__actions">
+                <a class="btn btn--primary btn--block" href="contato.html?perfil=armador&amp;segmento=cabotagem#formulario">Solicitar oficiais mercantes</a>
+                <a class="link-arrow" href="trabalhe-conosco.html?mercado=cabotagem">
+                  Sou oficial mercante
+                  <svg class="link-arrow__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloco 3 — Navegação Interior -->
+          <article class="segment-card segment-card--interior reveal reveal--delay-2">
+            <div class="segment-card__media">
+              <img class="segment-card__image" src="assets/empurrador-fluvial.jpg" alt="Empurrador conduzindo comboio de barcaças em rio da região Amazônica" width="1376" height="768" loading="lazy" decoding="async" />
+              <span class="segment-card__badge">03 · Fluviários</span>
+            </div>
+            <div class="segment-card__body">
+              <h3 class="segment-card__title">Navegação Interior</h3>
+              <p class="segment-card__text">
+                <strong>Comandantes e Marinheiros Fluviais</strong> para comboios de barcaças, empurradores e transporte fluvial.
+              </p>
+              <ul class="segment-card__tags" aria-label="Embarcações atendidas">
+                <li class="segment-card__tag">Comboios de barcaças</li>
+                <li class="segment-card__tag">Empurradores</li>
+                <li class="segment-card__tag">Transporte fluvial</li>
+              </ul>
+              <p class="segment-card__highlight">
+                <svg class="segment-card__highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+                <span>Experiência na <strong>região Amazônica</strong> e na <strong>Hidrovia Tietê-Paraná</strong>.</span>
+              </p>
+              <div class="segment-card__actions">
+                <a class="btn btn--primary btn--block" href="contato.html?perfil=armador&amp;segmento=interior#formulario">Solicitar fluviários</a>
+                <a class="link-arrow" href="trabalhe-conosco.html?mercado=interior">
+                  Sou fluviário
+                  <svg class="link-arrow__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         FAIXA DE CONFIANÇA (fundo Horizonte)
+         ================================================================== -->
+    <section class="trust-bar" aria-label="Diferenciais da MS CREW">
+      <div class="container">
+        <ul class="trust-bar__list" role="list">
+          <li class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
+            <span class="trust-bar__copy">
+              <strong class="trust-bar__title">Onshore &amp; Offshore</strong>
+              <span class="trust-bar__text">Atuação em terra, no mar e nos rios</span>
+            </span>
+          </li>
+          <li class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            </span>
+            <span class="trust-bar__copy">
+              <strong class="trust-bar__title">Óleo &amp; Gás</strong>
+              <span class="trust-bar__text">Especialistas em apoio marítimo</span>
+            </span>
+          </li>
+          <li class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <span class="trust-bar__copy">
+              <strong class="trust-bar__title">STCW · MLC 2006</strong>
+              <span class="trust-bar__text">Documentação conferida e em dia</span>
+            </span>
+          </li>
+          <li class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+            </span>
+            <span class="trust-bar__copy">
+              <strong class="trust-bar__title">Banco de Talentos</strong>
+              <span class="trust-bar__text">Pré-selecionado por categoria e função</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SERVIÇOS
+         ================================================================== -->
+    <section class="section section--surface services" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <header class="section-heading section-heading--center reveal">
+          <p class="section-heading__eyebrow">O que fazemos</p>
+          <h2 class="section-heading__title" id="servicos-titulo">Gestão completa de mão de obra aquaviária</h2>
+          <p class="section-heading__text">Do recrutamento à folha de pagamento: cuidamos da sua tripulação para que você foque na operação.</p>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <h3 class="service-card__title">Terceirização de Mão de Obra</h3>
+            <p class="service-card__text">Vínculo empregatício com a MS CREW: assumimos remuneração, encargos sociais e trabalhistas em contratos determinados ou indeterminados.</p>
+          </article>
+
+          <article class="service-card reveal reveal--delay-1">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+            </span>
+            <h3 class="service-card__title">Recrutamento e Seleção</h3>
+            <p class="service-card__text">Candidatos rigorosamente avaliados, com documentação conferida, de acordo com o perfil solicitado — na data e hora do embarque.</p>
+          </article>
+
+          <article class="service-card reveal reveal--delay-2">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>
+            </span>
+            <h3 class="service-card__title">Folha de Pagamento</h3>
+            <p class="service-card__text">Cálculos mensais, rescisões, férias, adiantamentos, fechamento e obrigações acessórias com total conformidade legal.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
+            </span>
+            <h3 class="service-card__title">Departamento Pessoal</h3>
+            <p class="service-card__text">Consultoria e execução das rotinas de DP: admissões, escalas de embarque, controle de certificados e conformidade MLC 2006.</p>
+          </article>
+
+          <article class="service-card reveal reveal--delay-1">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            </span>
+            <h3 class="service-card__title">Logística de Embarque</h3>
+            <p class="service-card__text">Passagens, hospedagem, traslados e troca de turma coordenados para que a tripulação chegue a bordo no prazo.</p>
+          </article>
+
+          <article class="service-card reveal reveal--delay-2">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </span>
+            <h3 class="service-card__title">Benefícios e Bem-estar</h3>
+            <p class="service-card__text">Gestão de vale-refeição, transporte, assistência médica, seguro de vida em grupo e uniformes da tripulação.</p>
+          </article>
+        </div>
+
+        <div class="services__footer reveal">
+          <a class="btn btn--secondary" href="servicos.html">
+            Ver todos os serviços
+            <svg class="btn__icon btn__icon--end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SOBRE (TEASER)
+         ================================================================== -->
+    <section class="section about-teaser" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container about-teaser__inner">
+
+        <div class="about-teaser__media reveal">
+          <img class="about-teaser__image" src="assets/sobre-nos-home.jpg" alt="Equipe da MS CREW em operação marítima" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="about-teaser__stat">
+            <strong class="about-teaser__stat-value">24h</strong>
+            <span class="about-teaser__stat-label">Plantão para reposições e trocas de turma</span>
+          </div>
+        </div>
+
+        <div class="about-teaser__content reveal reveal--delay-1">
+          <header class="section-heading">
+            <p class="section-heading__eyebrow">Por que a MS CREW</p>
+            <h2 class="section-heading__title" id="sobre-titulo">A tripulação certa, no prazo que a sua operação exige.</h2>
+          </header>
+          <p class="about-teaser__text">
+            Com o crescimento dos setores naval e de óleo e gás, encontrar mão de obra qualificada tornou-se um desafio.
+            A MS CREW nasceu para resolver exatamente isso: um banco de talentos categorizado por função e um processo
+            seletivo rigoroso que entrega profissionais prontos para embarcar.
+          </p>
+          <ul class="checklist about-teaser__list" role="list">
+            <li class="checklist__item">Triagem técnica e conferência de CIR, STCW e certificados</li>
+            <li class="checklist__item">Reposição ágil de tripulantes em troca de turma</li>
+            <li class="checklist__item">Conformidade com MLC 2006 e normas da Autoridade Marítima</li>
+          </ul>
+          <a class="btn btn--primary" href="sobre.html">
+            Conheça a MS CREW
+            <svg class="btn__icon btn__icon--end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         PORTAL DO MARÍTIMO (TEASER)
+         ================================================================== -->
+    <section class="section portal-teaser" id="vagas" aria-labelledby="vagas-titulo">
+      <div class="container portal-teaser__inner">
+
+        <div class="portal-teaser__content reveal">
+          <header class="section-heading section-heading--inverse">
+            <p class="section-heading__eyebrow">Portal do Marítimo</p>
+            <h2 class="section-heading__title" id="vagas-titulo">Embarque na sua próxima grande oportunidade.</h2>
+            <p class="section-heading__text">Cadastre sua CIR e seus certificados STCW uma única vez. Nossa equipe cruza o seu perfil com as vagas abertas.</p>
+          </header>
+
+          <ol class="portal-teaser__steps" role="list">
+            <li class="portal-teaser__step">
+              <span class="portal-teaser__step-number">1</span>
+              <span class="portal-teaser__step-text"><strong>Dados pessoais</strong> e categoria</span>
+            </li>
+            <li class="portal-teaser__step">
+              <span class="portal-teaser__step-number">2</span>
+              <span class="portal-teaser__step-text"><strong>CIR</strong> e último embarque</span>
+            </li>
+            <li class="portal-teaser__step">
+              <span class="portal-teaser__step-number">3</span>
+              <span class="portal-teaser__step-text"><strong>Certificados</strong> exigidos para o seu mercado</span>
+            </li>
+          </ol>
+
+          <a class="btn btn--light btn--lg" href="trabalhe-conosco.html">
+            Cadastrar meus documentos
+            <svg class="btn__icon btn__icon--end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="portal-teaser__jobs reveal reveal--delay-1">
+          <h3 class="portal-teaser__jobs-title">Vagas em destaque</h3>
+          <ul class="portal-teaser__job-list" role="list">
+            <li>
+              <article class="job-card">
+                <div class="job-card__header">
+                  <h4 class="job-card__title">Imediato (Chief Mate)</h4>
+                  <span class="job-card__status">Aberta</span>
+                </div>
+                <p class="job-card__meta">Offshore · PSV · Escala 28x28</p>
+                <a class="link-arrow job-card__link" href="trabalhe-conosco.html?mercado=offshore&amp;categoria=1ON">
+                  Candidatar-se<span class="u-visually-hidden"> para Imediato (Chief Mate)</span>
+                  <svg class="link-arrow__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="job-card">
+                <div class="job-card__header">
+                  <h4 class="job-card__title">Condutor de Máquinas</h4>
+                  <span class="job-card__status">Aberta</span>
+                </div>
+                <p class="job-card__meta">Cabotagem · Graneleiro · Início imediato</p>
+                <a class="link-arrow job-card__link" href="trabalhe-conosco.html?mercado=cabotagem&amp;categoria=CDM">
+                  Candidatar-se<span class="u-visually-hidden"> para Condutor de Máquinas</span>
+                  <svg class="link-arrow__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="job-card">
+                <div class="job-card__header">
+                  <h4 class="job-card__title">Marinheiro Fluvial de Convés</h4>
+                  <span class="job-card__status">Aberta</span>
+                </div>
+                <p class="job-card__meta">Navegação Interior · Comboio graneleiro · Amazônia</p>
+                <a class="link-arrow job-card__link" href="trabalhe-conosco.html?mercado=interior&amp;categoria=MFC">
+                  Candidatar-se<span class="u-visually-hidden"> para Marinheiro Fluvial de Convés</span>
+                  <svg class="link-arrow__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         CTA FINAL
+         ================================================================== -->
+    <section class="section" aria-labelledby="cta-titulo">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="cta-band__content">
+            <h2 class="cta-band__title" id="cta-titulo">Precisa de tripulação para a próxima troca de turma?</h2>
+            <p class="cta-band__text">Fale com nossos especialistas e receba uma proposta sob medida para a sua embarcação.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--primary btn--lg" href="contato.html?perfil=armador#formulario">
+              Solicitar Tripulação
+              <svg class="btn__icon btn__icon--end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="partials/load-footer.js"></script>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

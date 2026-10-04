@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Trabalhe Conosco | MSCREW — Vagas e Recrutamento Marítimo</title>
+  <meta name="description" content="Faça parte da tripulação MSCREW. Envie seu currículo para vagas offshore, cabotagem e apoio marítimo. Cadastre-se em nosso banco de talentos." />
+  <meta name="keywords" content="trabalhe conosco MSCREW, vagas marítimas, emprego offshore, banco de talentos marítimo, currículo" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#004b87" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Trabalhe Conosco | MSCREW — Banco de Talentos" />
+  <meta property="og:description" content="Faça parte do nosso banco de talentos exclusivo para marítimos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/fundo-hero.jpg" />
+  
+  <link rel="icon" type="image/png" href="assets/logo-mscrew-color.png" />
+
+  <!-- Flag de JS -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Tipografia: Montserrat Black (títulos) + Open Sans (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- LCP -->
+  <link rel="preload" as="image" href="assets/fundo-hero.jpg" fetchpriority="high" />
+
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Estilos exclusivos -->
+  <link rel="stylesheet" href="css/contato.css" /> <!-- Reusing forms layout from contato.css -->
+  <link rel="stylesheet" href="css/trabalhe-conosco.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho Modular -->
+  <div id="header-placeholder"></div>
+  <script src="partials/load-header.js"></script>
+
+  <main id="conteudo">
+
+    <!-- ==================================================================
+         HERO TRABALHE CONOSCO
+         ================================================================== -->
+    <section class="page-hero" aria-label="Trabalhe Conosco">
+      <div class="page-hero__background" aria-hidden="true">
+        <img class="page-hero__image" src="assets/fundo-hero.jpg" alt="" width="1920" height="1080" fetchpriority="high" />
+        <div class="page-hero__overlay"></div>
+      </div>
+      
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Localização na página">
+          <a class="breadcrumb__link" href="index.html">Início</a>
+          <svg class="breadcrumb__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          <span class="breadcrumb__current">Trabalhe Conosco</span>
+        </nav>
+
+        <p class="page-hero__eyebrow">
+          <svg class="page-hero__eyebrow-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.114 2.007-.327 2.952m-2.127 4.579A11.956 11.956 0 0112 21a11.966 11.966 0 01-8.543-3.642"/>
+          </svg>
+          Banco de Talentos
+        </p>
+        
+        <h1 class="page-hero__title reveal">
+          Faça parte da nossa <span class="page-hero__title-accent">Tripulação</span>
+        </h1>
+
+        <p class="page-hero__text reveal reveal--delay-1">
+          Cadastre seu currículo no nosso banco de talentos e participe dos processos seletivos para as maiores empresas do setor marítimo e offshore.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SEÇÃO DE FORMULÁRIO DE VAGAS
+         ================================================================== -->
+    <section class="contact-section section-spacing" id="cadastro-curriculo" aria-label="Cadastro de Currículo">
+      <div class="container">
+        <div class="contact__grid">
+  
+          <!-- COLUNA ESQUERDA: INFORMAÇÕES DE RECRUTAMENTO -->
+          <div class="contact__info reveal">
+            
+            <div class="contact__header">
+              <span class="contact__badge">
+                <svg class="contact__badge-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                Processo Seletivo
+              </span>
+              <h2 class="contact__title">Por que trabalhar conosco?</h2>
+              <p class="contact__subtitle">A MSCREW gerencia o recrutamento e embarque de marítimos para operações exigentes com total transparência e suporte.</p>
+            </div>
+  
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div class="contact-item__body">
+                  <h3 class="contact-item__title">Seleção Rigorosa</h3>
+                  <p class="contact-item__text">Buscamos profissionais com certificações atualizadas (STCW) e experiência comprovada em suas categorias.</p>
+                </div>
+              </li>
+  
+              <li class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div class="contact-item__body">
+                  <h3 class="contact-item__title">Embarque Ágil</h3>
+                  <p class="contact-item__text">Nosso banco de dados qualificado permite que os candidatos certos sejam chamados rapidamente para as vagas.</p>
+                </div>
+              </li>
+  
+              <li class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div class="contact-item__body">
+                  <h3 class="contact-item__title">Desenvolvimento Contínuo</h3>
+                  <p class="contact-item__text">Acompanhamos a evolução dos nossos tripulantes e incentivamos o constante aprimoramento profissional.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- COLUNA DIREITA: FORMULÁRIO DE CADASTRO -->
+          <div class="contact-form-wrapper reveal reveal--delay-1">
+            <header class="contact-form__header">
+              <h2 class="contact-form__title">Cadastre seu Currículo</h2>
+              <p class="contact-form__subtitle">Insira suas informações e anexe seu currículo atualizado para fazer parte da nossa base.</p>
+            </header>
+  
+            <form class="contact-form" id="formulario-contato" method="POST" action="#" enctype="multipart/form-data" novalidate>
+  
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="fc-nome" class="form__label">Nome Completo <span class="form__required" aria-label="obrigatório">*</span></label>
+                  <input type="text" id="fc-nome" name="nome" class="form__control" placeholder="Seu nome completo" required aria-required="true" autocomplete="name" />
+                </div>
+                <div class="form__group">
+                  <label for="fc-email" class="form__label">E-mail <span class="form__required" aria-label="obrigatório">*</span></label>
+                  <input type="email" id="fc-email" name="email" class="form__control" placeholder="seunome@email.com" required aria-required="true" autocomplete="email" />
+                </div>
+              </div>
+  
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="fc-telefone" class="form__label">Telefone / WhatsApp <span class="form__required" aria-label="obrigatório">*</span></label>
+                  <input type="tel" id="fc-telefone" name="telefone" class="form__control" placeholder="+55 (21) 99999-9999" required aria-required="true" autocomplete="tel" />
+                </div>
+                <div class="form__group">
+                  <label for="fc-categoria" class="form__label">Categoria / Função <span class="form__required" aria-label="obrigatório">*</span></label>
+                  <div class="select-wrapper">
+                    <select id="fc-categoria" name="categoria" class="form__control form__select" required aria-required="true">
+                      <option value="" disabled selected>Selecione sua categoria...</option>
+                      <option value="oficial-nautica">Oficial de Náutica (CCB, 1ON, 2ON)</option>
+                      <option value="oficial-maquinas">Oficial de Máquinas (OSM, 1OM, 2OM)</option>
+                      <option value="subalterno-conves">Subalterno de Convés (MNC, MOC)</option>
+                      <option value="subalterno-maquinas">Subalterno de Máquinas (MNM, MOM)</option>
+                      <option value="cozinheiro-taifeiro">Cozinheiro / Taifeiro (CZA, TAA)</option>
+                      <option value="fluviario">Fluvário</option>
+                      <option value="onshore">Staff Onshore (Administrativo)</option>
+                      <option value="outros">Outros</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form__group">
+                <label for="fc-mensagem" class="form__label">Apresentação Resumida / Cursos Relevantes</label>
+                <textarea id="fc-mensagem" name="mensagem" class="form__control form__textarea" placeholder="Descreva brevemente suas qualificações, cursos válidos (como HUET, CBSP) e experiências..." rows="4"></textarea>
+              </div>
+  
+              <div class="file-upload">
+                <svg class="file-upload__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                </svg>
+                <label for="fc-curriculo" class="file-upload__label">
+                  <span class="file-upload__text" id="upload-texto">Anexe seu Currículo (PDF) <span class="form-required">*</span></span>
+                  <span class="file-upload__size">Tamanho máximo: 5 MB</span>
+                  <input id="fc-curriculo" name="curriculo" type="file" accept=".pdf" class="u-visually-hidden" required aria-required="true" />
+                </label>
+              </div>
+  
+              <button type="submit" id="btn-enviar-contato" class="btn btn--primary btn--block btn--enviar">
+                Enviar Currículo
+                <svg class="btn__icon btn__icon--end" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                </svg>
+              </button>
+  
+              <p class="form-privacy-note">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                </svg>
+                Seus dados serão tratados de forma confidencial e usados apenas para processos seletivos.
+              </p>
+            </form>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Modular -->
+  <div id="footer-placeholder"></div>
+  <script src="partials/load-footer.js"></script>
+
+  <!-- JavaScript -->
+  <script src="js/main.js" defer></script>
+  <script src="js/contato.js" defer></script> <!-- Reutiliza a lógica do formulário de contato -->
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Serviços | MSCREW — Crew Management &amp; Recrutamento Marítimo</title>
+  <meta name="description"
+    content="Conheça os serviços da MSCREW: Terceirização de Mão de Obra, Recrutamento e Seleção, Folha de Pagamento, Logística e muito mais para o setor marítimo." />
+  <meta name="keywords"
+    content="serviços MSCREW, terceirização marítima, recrutamento offshore, logística marítima, folha de pagamento" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nossos Serviços | MSCREW — Crew Management" />
+  <meta property="og:description" content="Soluções completas em gestão de mão de obra marítima, onshore e offshore." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Otimizações Lighthouse (LCP e FOUC) -->
+  <link rel="preload" as="image" href="assets/fundo-hero.jpg" fetchpriority="high" />
+
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Estilos exclusivos da página Serviços -->
+  <link rel="stylesheet" href="css/servicos.css" />
+</head>
+
+<body class="pagina-servicos">
+
+  <!-- ============================================================
+       CABEÇALHO
+       ============================================================ -->
+  <div id="header-placeholder"></div>
+  <script src="partials/load-header.js" defer></script>
+  <!-- /CABEÇALHO -->
+
+
+  <!-- ============================================================
+       SEÇÃO 1 — HERO
+       ============================================================ -->
+  <section class="servicos-hero" aria-label="Nossos Serviços — MSCREW">
+    <div class="servicos-hero__fundo-pontilhado" aria-hidden="true"></div>
+    <div class="servicos-hero__orbe--1" aria-hidden="true"></div>
+    <div class="servicos-hero__orbe--2" aria-hidden="true"></div>
+
+    <div class="servicos-hero__conteudo container-padrao">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Localização na página">
+        <a href="index.html">Início</a>
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+        <span>Serviços</span>
+      </nav>
+
+      <!-- Etiqueta -->
+      <div class="servicos-hero__etiqueta" role="note">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+        </svg>
+        O que fazemos
+      </div>
+
+      <!-- H1 -->
+      <h1 class="servicos-hero__titulo">
+        Conheça nossos
+        <span class="destaque">
+          Serviços
+          <svg height="6" viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 5 Q50 0 100 4 Q150 8 200 3" stroke="currentColor" stroke-width="2.5" fill="none"
+              stroke-linecap="round" />
+          </svg>
+        </span>
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="servicos-hero__subtitulo">
+        Soluções completas em gestão de mão de obra marítima, onshore e offshore. Do recrutamento à folha de pagamento,
+        cuidamos de tudo para a sua operação.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 2 — GRID DE SERVIÇOS
+       ============================================================ -->
+  <section class="secao-servicos-grid" aria-label="Lista de Serviços">
+    <div class="container-padrao">
+
+      <div class="servicos-grid">
+        <!-- CARD 1 -->
+        <div class="servico-card-static reveal">
+          <div class="servico-card__imagem">
+            <img src="assets/terceirizacao-clt.jpg" alt="Terceirização de Mão de Obra - Regime CLT" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="servico-card__conteudo">
+            <h3>TERCEIRIZAÇÃO DE MÃO DE OBRA - REGIME CLT</h3>
+            <p>O vínculo empregatício é da MS CREW, nos contratos por prazo determinado ou indeterminado assumimos a
+              Remuneração, Encargos Sociais e Trabalhistas.</p>
+            <div class="servico-card__acao">
+              <a href="terceirizacao.html" class="botao-ver-mais">
+                Ver mais
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="servico-card-static reveal reveal-delay-1">
+          <div class="servico-card__imagem">
+            <img src="assets/recrutamento.jpg" alt="Recrutamento e Seleção de Pessoal Marítimo" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="servico-card__conteudo">
+            <h3>RECRUTAMENTO E SELEÇÃO DE PESSOAL ONSHORE E OFFSHORE</h3>
+            <p>Encaminhamos candidatos rigorosamente selecionados, de acordo com o perfil solicitado por sua empresa, na
+              data e hora desejada.</p>
+            <div class="servico-card__acao">
+              <a href="recrutamento.html" class="botao-ver-mais">
+                Ver mais
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="servico-card-static reveal reveal-delay-2">
+          <div class="servico-card__imagem">
+            <img src="assets/folha-pagto.jpg" alt="Folha de Pagamento Computadorizada" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="servico-card__conteudo">
+            <h3>FOLHA DE PAGTO COMPUTADORIZADA</h3>
+            <p>Terceirizamos recebimentos, lançamentos, cálculos (mensal, rescisão, férias), fechamentos e declarações
+              com total conformidade legal.</p>
+            <div class="servico-card__acao">
+              <a href="folha.html" class="botao-ver-mais">
+                Ver mais
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="servico-card-static reveal">
+          <div class="servico-card__imagem">
+            <img src="assets/logistica.jpg" alt="Logística Marítima e Portuária" loading="lazy" decoding="async" width="800" height="600">
+          </div>
+          <div class="servico-card__conteudo">
+            <h3>LOGÍSTICA</h3>
+            <p>Soluções logísticas integradas para operações marítimas, apoio portuário, suprimento de embarcações e
+              trocas de tripulação.</p>
+            <div class="servico-card__acao">
+              <a href="logistica.html" class="botao-ver-mais">
+                Ver mais
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 3 — BANNER SERVIÇOS
+       ============================================================ -->
+  <section class="secao-servicos-banner" aria-label="Diferenciais MSCREW">
+    <div class="container-padrao">
+      <div class="servicos-banner-container reveal">
+
+        <!-- Coluna imagem (60%) -->
+        <div class="servicos-banner__imagem">
+          <img src="assets/banner-global.jpg" alt="Equipe MS CREW em operação offshore" loading="lazy" decoding="async" width="1200" height="800">
+          <div class="servicos-banner__imagem-overlay">
+            <span class="servicos-banner__badge">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              Excelência Operacional
+            </span>
+          </div>
+        </div>
+
+        <!-- Coluna texto (40%) -->
+        <div class="servicos-banner__texto">
+
+          <div class="servicos-banner__etiqueta">
+            <span class="servicos-banner__etiqueta-dot" aria-hidden="true"></span>
+            Nossos Diferenciais
+          </div>
+
+          <h2 class="servicos-banner__titulo">
+            Soluções completas para a sua operação
+          </h2>
+
+          <div class="servicos-banner__itens">
+            <div class="servicos-banner__item">
+              <div class="servicos-banner__item-icone" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <strong>Terceirização e Recrutamento</strong>
+                <p>Da triagem ao embarque — gerenciamos todo o ciclo de vida do profissional marítimo, onshore e offshore.</p>
+              </div>
+            </div>
+
+            <div class="servicos-banner__item">
+              <div class="servicos-banner__item-icone" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <div>
+                <strong>Folha de Pagamento e DP</strong>
+                <p>Processamento completo com total conformidade às obrigações trabalhistas, previdenciárias e fiscais.</p>
+              </div>
+            </div>
+
+            <div class="servicos-banner__item">
+              <div class="servicos-banner__item-icone" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <strong>Logística e Benefícios</strong>
+                <p>Suporte logístico integrado e gestão de benefícios para garantir eficiência e bem-estar da sua tripulação.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SEÇÃO 4 — CTA
+       ============================================================ -->
+  <section class="secao-servicos-cta" aria-label="Solicitar orçamento">
+    <div class="container-padrao">
+      <div class="servicos-cta reveal">
+        <h2>Pronto para otimizar sua operação?</h2>
+        <p>Conte com a expertise da MSCREW para fornecer a melhor mão de obra marítima e soluções operacionais para o
+          seu negócio.</p>
+        <a href="contato.html" class="botao-primario servicos-cta__botao">
+          Solicitar um Orçamento
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       RODAPÉ
+       ============================================================ -->
+  <div id="footer-placeholder"></div>
+  <script src="partials/load-footer.js" defer></script>
+  <!-- /RODAPÉ -->
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
