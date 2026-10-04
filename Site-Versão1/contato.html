@@ -173,11 +173,11 @@
             <div class="form-duplo">
               <div class="form-campo">
                 <label for="fc-nome" class="form-label">Nome Completo <span class="obrigatorio" aria-label="obrigatório">*</span></label>
-                <input type="text" id="fc-nome" name="nome" class="form-input" placeholder="Seu nome completo" required autocomplete="name" />
+                <input type="text" id="fc-nome" name="nome" class="form-input" placeholder="Seu nome completo" required aria-required="true" autocomplete="name" />
               </div>
               <div class="form-campo">
                 <label for="fc-email" class="form-label">E-mail <span class="obrigatorio" aria-label="obrigatório">*</span></label>
-                <input type="email" id="fc-email" name="email" class="form-input" placeholder="seunome@empresa.com.br" required autocomplete="email" />
+                <input type="email" id="fc-email" name="email" class="form-input" placeholder="seunome@empresa.com.br" required aria-required="true" autocomplete="email" />
               </div>
             </div>
 
@@ -188,7 +188,7 @@
               </div>
               <div class="form-campo">
                 <label for="fc-assunto" class="form-label">Motivo do Contato <span class="obrigatorio" aria-label="obrigatório">*</span></label>
-                <select id="fc-assunto" name="assunto" class="form-select" required>
+                <select id="fc-assunto" name="assunto" class="form-select" required aria-required="true">
                   <option value="" disabled selected>Selecione o motivo...</option>
                   <option value="armador">Sou Armador — Solicitar Tripulação</option>
                   <option value="vaga">Sou Marítimo — Enviar Currículo</option>
@@ -201,7 +201,7 @@
 
             <div class="form-campo">
               <label for="fc-mensagem" class="form-label">Mensagem <span class="obrigatorio" aria-label="obrigatório">*</span></label>
-              <textarea id="fc-mensagem" name="mensagem" class="form-textarea" placeholder="Descreva como podemos ajudar sua operação marítima..." rows="5" required></textarea>
+              <textarea id="fc-mensagem" name="mensagem" class="form-textarea" placeholder="Descreva como podemos ajudar sua operação marítima..." rows="5" required aria-required="true"></textarea>
             </div>
 
             <div class="upload-area">

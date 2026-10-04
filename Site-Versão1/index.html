@@ -40,20 +40,21 @@
   <!-- ============================================================
        SEÇÃO 2 — INÍCIO (HERO SECTION)
        ============================================================ -->
-  <section id="inicio" class="secao-hero" aria-label="Seção Principal">
+  <!-- [CÓDIGO ANTIGO - ROLLBACK]
+<section id="inicio" class="secao-hero" aria-label="Seção Principal">
     
-    <!-- Elementos decorativos do Fundo -->
+    <!- - Elementos decorativos do Fundo - ->
     <div class="fundo-pontilhado"></div>
     <div class="fundo-linhas-diagonais"></div>
     <div class="orbe-luz-1"></div>
     <div class="orbe-luz-2"></div>
     <div class="orbe-luz-3"></div>
 
-    <!-- Conteúdo do Hero -->
+    <!- - Conteúdo do Hero - ->
     <div class="conteudo-hero container-padrao">
       <div class="hero-layout-grid">
         <div class="hero-texto-coluna">
-          <!-- H1 -->
+          <!- - H1 - ->
           <h1 class="titulo-principal">
             Conectando 
             <span class="palavra-destaque">
@@ -65,16 +66,16 @@
             à Sua Operação Marítima.
           </h1>
 
-          <!-- Subtítulo -->
+          <!- - Subtítulo - ->
           <p class="subtitulo-hero">
             Gestão inovadora e tecnologia a serviço dos setores naval e de petróleo. Oferecemos consultoria e recrutamento de ponta com os profissionais mais capacitados do mercado.
           </p>
         </div>
       
-        <!-- Cartões de Chamada (B2B e B2C) -->
+        <!- - Cartões de Chamada (B2B e B2C) - ->
         <div class="grid-cartoes-hero">
 
-          <!-- Card B2B — Armadores -->
+          <!- - Card B2B — Armadores - ->
           <div class="cartao-b2b">
             <div class="etiqueta-cartao etiqueta-cartao-b2b">
               <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -95,8 +96,8 @@
               Solicitar Tripulação
             </a>
           </div>
-  <!--
-          <!-- Card B2C — Tripulantes 
+  <!- -
+          <!- - Card B2C — Tripulantes 
           <div class="cartao-b2c">
             <div class="etiqueta-cartao etiqueta-cartao-b2c">
               <svg class="icone-cartao" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -118,18 +119,38 @@
               Cadastrar Currículo
             </a>
           </div>
-  -->
+  - ->
         </div>
       </div>
     </div>
 
-    <!-- Divisor em formato de onda -->
+    <!- - Divisor em formato de onda - ->
     <div class="divisor-onda wave-container" aria-hidden="true">
       <svg viewBox="0 0 1200 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,40 C200,72 400,0 600,36 C800,72 1000,8 1200,36 L1200,72 L0,72 Z" fill="#ffffff"/>
       </svg>
     </div>
   </section>
+-->
+
+<section class="hero" id="inicio" aria-label="Seção Principal">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content container-padrao">
+    <div class="hero__body">
+      <h1 class="hero__title">
+        Conectando <br><span class="hero__title-highlight">os Melhores Talentos</span><br>à Sua Operação Marítima.
+      </h1>
+      <p class="hero__text">
+        Gestão inovadora e tecnologia a serviço dos setores naval e de petróleo. Oferecemos consultoria e recrutamento de ponta com os profissionais mais capacitados do mercado.
+      </p>
+      <div class="hero__actions">
+        <a href="#solucoes" class="btn btn--primary">Solicitar Tripulação</a>
+        <a href="#formulario" class="btn btn--outline">Cadastrar Currículo</a>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- /INÍCIO -->
 
 
@@ -194,21 +215,22 @@
   <!-- ============================================================
        SEÇÃO 4 — NOSSOS SERVIÇOS
        ============================================================ -->
-  <section id="servicos" class="secao-servicos">
-    <!-- Divisor em formato de onda no topo -->
+  <!-- [CÓDIGO ANTIGO - ROLLBACK]
+<section id="servicos" class="secao-servicos">
+    <!- - Divisor em formato de onda no topo - ->
     <div class="divisor-onda-top wave-container" aria-hidden="true">
       <svg viewBox="0 0 1200 72" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0,40 C200,72 400,0 600,36 C800,72 1000,8 1200,36 L1200,72 L0,72 Z" fill="#ffffff"/>
       </svg>
     </div>
 
-    <!-- Fundo pontilhado decorativo -->
+    <!- - Fundo pontilhado decorativo - ->
     <div class="servicos-fundo-pontilhado"></div>
 
     <div class="container-padrao">
       <div class="servicos-cabecalho reveal">
         <span class="servicos-etiqueta">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
           O que fazemos
         </span>
         <h2 class="servicos-titulo">Nossos Serviços</h2>
@@ -219,12 +241,12 @@
         <div class="servicos-carousel-wrapper">
           <div class="servicos-carousel-track" id="servicos-track">
 
-            <!-- CARD 1 -->
+            <!- - CARD 1 - ->
             <div class="servico-card reveal">
               <div>
                 <div class="servico-card-topo">
                   <div class="servico-icone">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                   </div>
                   <span class="servico-numero">01</span>
                 </div>
@@ -233,12 +255,12 @@
               <p>O vínculo empregatício é da MS CREW, nos contratos por prazo determinado ou indeterminado assumimos a Remuneração, Encargos Sociais e Trabalhistas.</p>
             </div>
 
-            <!-- CARD 2 -->
+            <!- - CARD 2 - ->
             <div class="servico-card reveal">
               <div>
                 <div class="servico-card-topo">
                   <div class="servico-icone">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                   </div>
                   <span class="servico-numero">02</span>
                 </div>
@@ -247,12 +269,12 @@
               <p>A MS CREW encaminhará candidatos de acordo com o perfil solicitado por sua empresa, na data e hora desejada.</p>
             </div>
 
-            <!-- CARD 3 -->
+            <!- - CARD 3 - ->
             <div class="servico-card reveal">
               <div>
                 <div class="servico-card-topo">
                   <div class="servico-icone">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   </div>
                   <span class="servico-numero">03</span>
                 </div>
@@ -261,12 +283,12 @@
               <p>Terceirizamos Recibos, Lançamentos, Cálculos da Folha (salário mensal, Rescisão, Férias, Adiantamento), Fechamento, RAIS, DIRF, FGTS/GEFIP/SEFIP.</p>
             </div>
 
-            <!-- CARD 4 -->
+            <!- - CARD 4 - ->
             <div class="servico-card reveal">
               <div>
                 <div class="servico-card-topo">
                   <div class="servico-icone">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                   </div>
                   <span class="servico-numero">04</span>
                 </div>
@@ -275,12 +297,12 @@
               <p>Consultoria e suporte completo para as rotinas de DP, garantindo conformidade legal e eficiência operacional.</p>
             </div>
 
-            <!-- CARD 5 -->
+            <!- - CARD 5 - ->
             <div class="servico-card reveal">
               <div>
                 <div class="servico-card-topo">
                   <div class="servico-icone">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                   </div>
                   <span class="servico-numero">05</span>
                 </div>
@@ -289,12 +311,12 @@
               <p>Soluções logísticas integradas para operações marítimas, apoio portuário e suprimento de embarcações.</p>
             </div>
 
-            <!-- CARD 6 -->
+            <!- - CARD 6 - ->
             <div class="servico-card reveal">
               <div>
                 <div class="servico-card-topo">
                   <div class="servico-icone">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
                   </div>
                   <span class="servico-numero">06</span>
                 </div>
@@ -306,19 +328,80 @@
           </div>
         </div>
         
-        <!-- Botões do Carrossel -->
+        <!- - Botões do Carrossel - ->
         <div class="servicos-carousel-controles">
           <button class="carousel-btn prev" id="servicos-prev" aria-label="Serviço anterior">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
           </button>
           <div class="carousel-dots" id="servicos-dots"></div>
           <button class="carousel-btn next" id="servicos-next" aria-label="Próximo serviço">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
       </div>
     </div>
   </section>
+-->
+
+<section class="services" id="servicos">
+  <div class="container-padrao">
+    <header class="services__header">
+      <span class="services__tag">O que fazemos</span>
+      <h2 class="services__title">Nossos Serviços</h2>
+      <p class="services__subtitle">Soluções completas em gestão de mão de obra marítima, onshore e offshore.</p>
+    </header>
+
+    <div class="services__grid">
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="service-card__title">Terceirização de Mão de Obra</h3>
+        <p class="service-card__text">O vínculo empregatício é da MS CREW, nos contratos por prazo determinado ou indeterminado assumimos a Remuneração, Encargos Sociais e Trabalhistas.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="service-card__title">Recrutamento e Seleção</h3>
+        <p class="service-card__text">A MS CREW encaminhará candidatos de acordo com o perfil solicitado por sua empresa, na data e hora desejada.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h3 class="service-card__title">Folha de Pagamento</h3>
+        <p class="service-card__text">Terceirizamos Recibos, Lançamentos, Cálculos da Folha, Rescisão, Férias, Adiantamento, Fechamento e Encargos.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="service-card__title">Gestão de Pessoas (DP)</h3>
+        <p class="service-card__text">Consultoria e suporte completo para as rotinas de Departamento Pessoal, garantindo conformidade legal.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3 class="service-card__title">Logística</h3>
+        <p class="service-card__text">Soluções logísticas integradas para operações marítimas, apoio portuário e suprimento de embarcações.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="service-card__title">Outros Serviços</h3>
+        <p class="service-card__text">Benefícios corporativos e soluções personalizadas para a sua operação marítima ou offshore.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
 
   <!-- ============================================================
@@ -386,7 +469,7 @@
               <span class="status-vaga">Aberta</span>
             </div>
             <p class="detalhes-vaga">Setor Offshore • Escala 28x28</p>
-            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
           </div>
           
           <div class="cartao-vaga">
@@ -395,7 +478,7 @@
               <span class="status-vaga">Aberta</span>
             </div>
             <p class="detalhes-vaga">Navio de Cabotagem • Início Imediato</p>
-            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
           </div>
           
           <div class="cartao-vaga">
@@ -404,7 +487,7 @@
               <span class="status-vaga">Aberta</span>
             </div>
             <p class="detalhes-vaga">Rebocador Portuário • Base Santos/SP</p>
-            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+            <a href="#formulario" class="link-candidatar">Candidate-se <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
           </div>
         </div>
 
@@ -434,7 +517,7 @@
         <div class="cta-contato-acoes">
           <a href="contato.html" id="botao-cta-contato-principal" class="cta-btn-principal">
             Fale Conosco
-            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18" height="18">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
             </svg>
           </a>
