@@ -48,10 +48,13 @@
             <li><a class="site-header__contact-link" href="tel:+5521999999999">${ICON.phone}+55 (21) 99999-9999</a></li>
             <li><a class="site-header__contact-link" href="mailto:contato@mscrew.com.br">${ICON.mail}contato@mscrew.com.br</a></li>
             <li><span class="site-header__contact-link">${ICON.clock}Plantão operacional 24h</span></li>
-            <li class="site-header__lang" style="display: flex; align-items: center; gap: 0.25rem; font-weight: 800; margin-left: 1rem; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 1rem;">
-              <a href="#" style=";">PT</a>
-              <span style="opacity: 0.5;">/</span>
-              <a href="#" style="opacity: 0.6; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">EN</a>
+            <li class="site-header__lang" style="display: flex; align-items: center; gap: 0.5rem; margin-left: 1rem; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 1rem;">
+              <a href="#" aria-label="Português" style="display: flex; align-items: center;">
+                <img src="https://flagcdn.com/br.svg" width="20" alt="Brasil" style="border-radius: 2px;">
+              </a>
+              <a href="#" aria-label="English" style="display: flex; align-items: center; opacity: 0.5; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">
+                <img src="https://flagcdn.com/us.svg" width="20" alt="Estados Unidos" style="border-radius: 2px;">
+              </a>
             </li>
           </ul>
         </div>
@@ -68,6 +71,16 @@
             <div class="site-nav__actions">
               <a href="contato.html" class="btn btn--primary btn--block">Contato ${ICON.arrow}</a>
               <a href="trabalhe-conosco.html" class="btn btn--secondary btn--block">Cadastrar no Portal do Marítimo</a>
+              
+              <!-- Idiomas no Mobile -->
+              <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 0.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-line);">
+                <a href="#" aria-label="Português" style="display: flex; align-items: center;">
+                  <img src="https://flagcdn.com/br.svg" width="26" alt="Brasil" style="border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                </a>
+                <a href="#" aria-label="English" style="display: flex; align-items: center; opacity: 0.5; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">
+                  <img src="https://flagcdn.com/us.svg" width="26" alt="Estados Unidos" style="border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                </a>
+              </div>
             </div>
           </nav>
 

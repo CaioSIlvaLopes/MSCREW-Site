@@ -51,7 +51,6 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  padding-top: 5rem;
 }
 
 .hero__content {
@@ -188,6 +187,45 @@
 .hero__pause[aria-pressed="true"] .hero__pause-icon--pause { display: none; }
 .hero__pause[aria-pressed="true"] .hero__pause-icon--play { display: block; }
 
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 110px; /* Diminui a distância para o header (aprox. altura do header + respiro) */
+    padding-bottom: 100px; /* Previne sobreposição com os controles na base */
+  }
+
+  .hero__content {
+    margin-top: 0;
+  }
+
+  .hero__title {
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero__captions {
+    margin-bottom: var(--space-md);
+    min-height: auto; /* Evita que espaços fixos sobreponham outros elementos */
+  }
+
+  .hero__caption {
+    font-size: var(--fs-md);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__controls {
+    bottom: -5.5rem;
+    right: 1rem;
+  }
+}
 
 /* ── 2. SEGMENTS ───────────────────────────────────────────────────────── */
 .segments {

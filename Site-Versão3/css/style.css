@@ -798,10 +798,17 @@ p {
   display: grid;
   gap: var(--space-2xl);
   padding-block: var(--space-3xl) var(--space-2xl);
+  text-align: center;
 }
 
 .site-footer__about {
   max-width: 340px;
+  margin-inline: auto;
+}
+
+.site-footer .brand {
+  margin-inline: auto;
+  display: inline-block;
 }
 
 .site-footer__text {
@@ -827,7 +834,8 @@ p {
 
 .site-footer__link {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: var(--space-xs);
   min-height: 32px;
   font-size: var(--fs-sm);
@@ -844,7 +852,7 @@ p {
 .site-footer__icon {
   width: 18px;
   height: 18px;
-  margin-top: 2px;
+  margin-top: 0; /* Changed from 2px since it's aligned center */
   flex-shrink: 0;
   color: var(--color-horizonte);
 }
@@ -852,6 +860,8 @@ p {
 .site-footer__bottom {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: var(--space-xs);
   padding-block: var(--space-lg);
   font-size: var(--fs-xs);
