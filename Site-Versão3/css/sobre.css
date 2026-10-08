@@ -24,7 +24,7 @@
 
 .history__title {
   font-family: var(--font-display);
-  font-size: var(--fs-h2);
+  font-size: 38px;
   font-weight: 800;
   color: var(--color-abismo);
   margin-bottom: var(--space-lg);
