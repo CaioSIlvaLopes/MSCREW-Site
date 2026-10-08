@@ -25,7 +25,8 @@
     { href: 'servicos.html', label: 'Serviços', match: ['servicos.html'] },
     { href: 'index.html#segmentos', label: 'Segmentos', match: [] },
     { href: 'sobre.html', label: 'Sobre Nós', match: ['sobre.html'] },
-    { href: 'trabalhe-conosco.html', label: 'Portal do Marítimo', match: ['trabalhe-conosco.html'] }
+    { href: 'politicas-mlc.html', label: 'Políticas', match: ['politicas-mlc.html'] },
+    { href: 'trabalhe-conosco.html', label: 'Trabalhe conosco', match: ['trabalhe-conosco.html'] }
   ];
 
   const currentPage = decodeURIComponent(window.location.pathname.split('/').pop() || '');
@@ -45,15 +46,15 @@
         <div class="container site-header__topbar-inner">
           <p class="site-header__tagline">Crew Management · Offshore · Cabotagem · Longo Curso · Navegação Interior</p>
           <ul class="site-header__contacts">
-            <li><a class="site-header__contact-link" href="tel:+5521999999999">${ICON.phone}+55 (21) 99999-9999</a></li>
-            <li><a class="site-header__contact-link" href="mailto:contato@mscrew.com.br">${ICON.mail}contato@mscrew.com.br</a></li>
+            <li><a class="site-header__contact-link" href="tel:+552125162721">${ICON.phone}+55 (21) 2516-2721</a></li>
+            <li><a class="site-header__contact-link" href="mailto:mscrew@mscrew.com.br">${ICON.mail}mscrew@mscrew.com.br</a></li>
             <li><span class="site-header__contact-link">${ICON.clock}Plantão operacional 24h</span></li>
             <li class="site-header__lang" style="display: flex; align-items: center; gap: 0.5rem; margin-left: 1rem; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 1rem;">
               <a href="#" aria-label="Português" style="display: flex; align-items: center;">
-                <img src="https://flagcdn.com/br.svg" width="20" alt="Brasil" style="border-radius: 2px;">
+                <img src="https://flagcdn.com/br.svg" width="25" alt="Brasil" style="border-radius: 2px;">
               </a>
               <a href="#" aria-label="English" style="display: flex; align-items: center; opacity: 0.5; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">
-                <img src="https://flagcdn.com/us.svg" width="20" alt="Estados Unidos" style="border-radius: 2px;">
+                <img src="https://flagcdn.com/us.svg" width="25" alt="Estados Unidos" style="border-radius: 2px;">
               </a>
             </li>
           </ul>
@@ -70,7 +71,7 @@
             <ul class="site-nav__list">${navLinks}</ul>
             <div class="site-nav__actions">
               <a href="contato.html" class="btn btn--primary btn--block">Contato ${ICON.arrow}</a>
-              <a href="trabalhe-conosco.html" class="btn btn--secondary btn--block">Cadastrar no Portal do Marítimo</a>
+              <a href="trabalhe-conosco.html" class="btn btn--secondary btn--block">Trabalhe Conosco</a>
               
               <!-- Idiomas no Mobile -->
               <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 0.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-line);">

@@ -55,6 +55,8 @@
   --font-display: 'Montserrat', Impact, 'Arial Black', 'Helvetica Neue', sans-serif;
   --font-body: 'Open Sans', 'Lato', Calibri, 'Segoe UI', Arial, sans-serif;
 
+  --fs-xs-footer: 0.8125rem;
+  
   --fs-2xs: 0.75rem;
   --fs-xs: 0.8125rem;
   --fs-sm: 0.875rem;
@@ -838,7 +840,7 @@ p {
   justify-content: center;
   gap: var(--space-xs);
   min-height: 32px;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs-footer);
   color: #cfe0ee;
   text-decoration: none;
   transition: color var(--duration);

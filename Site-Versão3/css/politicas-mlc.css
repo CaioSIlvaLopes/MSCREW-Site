@@ -1,0 +1,307 @@
+/* ==========================================================================
+   PÁGINA: POLÍTICAS MLC 2006
+   ========================================================================== */
+
+.mlc-section {
+  padding: var(--section-y) 0;
+}
+
+.mlc-section--light {
+  background-color: var(--color-white);
+}
+
+.mlc-section--surface {
+  background-color: var(--color-surface);
+}
+
+.mlc-section--dark {
+  background-color: var(--color-maritimo-deep);
+  color: var(--color-white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  color: var(--color-maritimo);
+  margin-bottom: var(--space-sm);
+}
+
+.section-header__text {
+  font-size: var(--fs-lg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* --- Hero Section --- */
+.mlc-hero {
+  position: relative;
+  padding: calc(var(--section-y) + 4rem) 0 var(--section-y);
+  background: linear-gradient(135deg, var(--color-maritimo-deep) 0%, var(--color-maritimo) 100%);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.mlc-hero__bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.1;
+  background-image: radial-gradient(var(--color-white) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.mlc-hero__container {
+  position: relative;
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .mlc-hero__container {
+    grid-template-columns: 1fr 400px;
+    gap: var(--space-3xl);
+  }
+}
+
+.mlc-hero__subtitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-horizonte);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.mlc-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
+  color: var(--color-white);
+}
+
+.mlc-hero__intro {
+  font-size: var(--fs-lg);
+  color: var(--color-line);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.mlc-hero__logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Cards Grid --- */
+.mlc-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .mlc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mlc-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.mlc-card {
+  background: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration) var(--ease-out), box-shadow var(--duration) var(--ease-out);
+}
+
+.mlc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-horizonte-soft);
+}
+
+.mlc-card__icon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-horizonte-mist);
+  color: var(--color-horizonte-strong);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.mlc-card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.mlc-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  color: var(--color-maritimo);
+  margin-bottom: var(--space-xs);
+}
+
+.mlc-card__text {
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+
+/* --- Accordion --- */
+.mlc-accordion-group {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mlc-accordion {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.mlc-accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--duration) var(--ease-out);
+}
+
+.mlc-accordion__trigger:hover,
+.mlc-accordion__trigger:focus {
+  background-color: var(--color-surface);
+}
+
+.mlc-accordion__trigger:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-maritimo);
+}
+
+.mlc-accordion__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  color: var(--color-maritimo);
+}
+
+.mlc-accordion__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-horizonte-strong);
+  transition: transform var(--duration) var(--ease-out);
+}
+
+.mlc-accordion__trigger[aria-expanded="true"] .mlc-accordion__icon {
+  transform: rotate(180deg);
+}
+
+.mlc-accordion__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration) var(--ease-out);
+  visibility: hidden;
+}
+
+.mlc-accordion__trigger[aria-expanded="true"] + .mlc-accordion__panel {
+  grid-template-rows: 1fr;
+  visibility: visible;
+}
+
+.mlc-accordion__content {
+  overflow: hidden;
+}
+
+.mlc-accordion__content-inner {
+  padding: 0 var(--space-lg) var(--space-lg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: var(--fs-base);
+}
+
+.mlc-accordion__content-inner p:not(:last-child) {
+  margin-bottom: var(--space-md);
+}
+
+/* --- HR Section --- */
+.mlc-hr {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.mlc-hr__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+}
+
+.mlc-hr__text {
+  font-size: var(--fs-lg);
+  color: var(--color-line);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.mlc-hr__cta {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+}
+
+.mlc-hr__cta-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  color: var(--color-white);
+  margin-bottom: var(--space-xs);
+}
+
+.mlc-hr__cta-text {
+  font-size: var(--fs-base);
+  color: var(--color-line);
+  margin-bottom: var(--space-lg);
+  line-height: 1.5;
+}
+
+.mlc-hr__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-white); /* To ensure logo readability if images.png is not fully transparent correctly */
+  padding: var(--space-md);
+}

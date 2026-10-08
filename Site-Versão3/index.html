@@ -18,8 +18,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/navio-offshore.jpg" />
 
+  <!--Favicon-->
   <link rel="icon" type="image/png" href="assets/logo-mscrew-color.png" />
-
+  
   <!-- Flag de JS (habilita animações progressivas) -->
   <script>document.documentElement.classList.add('js');</script>
 
@@ -48,15 +49,18 @@
     <section class="hero" id="inicio" data-hero aria-roledescription="carrossel" aria-label="Destaques da MS CREW">
 
       <div class="hero__slides">
-        <div class="hero__slide hero__slide--active" role="group" aria-roledescription="slide" aria-label="1 de 3: Offshore">
+        <div class="hero__slide hero__slide--active" role="group" aria-roledescription="slide" aria-label="1 de 4: Offshore">
           <img class="hero__image" src="assets/navio-offshore.jpg" alt="Navio de apoio offshore (PSV) navegando próximo a uma plataforma de produção de petróleo" width="1376" height="768" fetchpriority="high" />
         </div>
-        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="2 de 3: Cabotagem e Longo Curso" aria-hidden="true">
+        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="2 de 4: Cabotagem e Longo Curso" aria-hidden="true">
           <img class="hero__image" src="assets/navio-mercante.jpg" alt="Navio porta-contêineres de longo curso navegando em mar aberto" width="1376" height="768" loading="lazy" />
         </div>
-        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="3 de 3: Navegação Interior" aria-hidden="true">
+        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="3 de 4: Navegação Interior" aria-hidden="true">
           <img class="hero__image" src="assets/empurrador-fluvial.jpg" alt="Empurrador conduzindo comboio de barcaças graneleiras em rio da Amazônia" width="1376" height="768" loading="lazy" />
         </div>
+        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="4 de 4: Visão de Futuro" aria-hidden="true">
+          <img class="hero__image" src="assets/por-do-sol.jpg" alt="Navio porta-contêineres de longo curso navegando ao pôr do sol" width="1376" height="768" loading="lazy" />
+        </div>   
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
@@ -83,6 +87,10 @@
             <p class="hero__caption">
               <strong class="hero__caption-label">Navegação Interior</strong>
               Comandantes e Marinheiros Fluviais para comboios na Amazônia e na Hidrovia Tietê-Paraná.
+            </p>
+            <p class="hero__caption">
+              <strong class="hero__caption-label">Visão de Futuro</strong>
+              Construindo horizontes promissores e garantindo operações seguras em todos os mares.
             </p>
           </div>
 
@@ -111,6 +119,10 @@
             </button>
             <button class="hero__dot" type="button" aria-label="Destaque 3: Navegação Interior">
               <span class="hero__dot-label">Interior</span>
+              <span class="hero__dot-progress" aria-hidden="true"></span>
+            </button>
+            <button class="hero__dot" type="button" aria-label="Destaque 4: Visão de Futuro">
+              <span class="hero__dot-label">Futuro</span>
               <span class="hero__dot-progress" aria-hidden="true"></span>
             </button>
           </div>
@@ -375,10 +387,15 @@
             <li class="checklist__item">Reposição ágil de tripulantes em troca de turma</li>
             <li class="checklist__item">Conformidade com MLC 2006 e normas da Autoridade Marítima</li>
           </ul>
-          <a class="btn btn--primary" href="sobre.html">
-            Conheça a MS CREW
-            <svg class="btn__icon btn__icon--end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a class="btn btn--primary" href="sobre.html">
+              Conheça a MS CREW
+              <svg class="btn__icon btn__icon--end" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--secondary" href="politicas-mlc.html">
+              Políticas MLC 2006
+            </a>
+          </div>
         </div>
 
       </div>

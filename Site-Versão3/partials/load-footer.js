@@ -55,9 +55,9 @@
           <div class="site-footer__col">
             <h2 class="site-footer__title">Atendimento</h2>
             <ul class="site-footer__list">
-              <li><span class="site-footer__link">${ICON.pin}Av. Rio Branco, Centro<br />Rio de Janeiro – RJ, Brasil</span></li>
-              <li><a class="site-footer__link" href="mailto:contato@mscrew.com.br">${ICON.mail}contato@mscrew.com.br</a></li>
-              <li><a class="site-footer__link" href="tel:+5521999999999">${ICON.phone}+55 (21) 99999-9999</a></li>
+              <li><span class="site-footer__link">${ICON.pin}Rua do Mercado, 17 – Sala 501 – Centro<br />Rio de Janeiro – RJ</span></li>
+              <li><a class="site-footer__link" href="mailto:mscrew@mscrew.com.br">${ICON.mail}mscrew@mscrew.com.br</a></li>
+              <li><a class="site-footer__link" href="tel:+552125162721">${ICON.phone}+55 (21) 2516-2721</a></li>
               <li><span class="site-footer__link">${ICON.clock}Plantão operacional 24h</span></li>
             </ul>
           </div>
