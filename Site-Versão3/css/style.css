@@ -1545,7 +1545,7 @@ p {
   margin-bottom: var(--space-xs);
 }
 .cta-band__text {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
   opacity: 0.9;
 }
 .cta-band__actions {

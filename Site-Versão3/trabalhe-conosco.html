@@ -169,20 +169,41 @@
                   <label for="fc-categoria" class="form__label">Categoria / Função <span class="form__required" aria-label="obrigatório">*</span></label>
                   <div class="select-wrapper">
                     <select id="fc-categoria" name="categoria" class="form__control form__select" required aria-required="true">
-                      <option value="" disabled selected>Selecione sua categoria...</option>
-                      <option value="oficial-nautica">Oficial de Náutica (CCB, 1ON, 2ON)</option>
-                      <option value="oficial-maquinas">Oficial de Máquinas (OSM, 1OM, 2OM)</option>
-                      <option value="subalterno-conves">Subalterno de Convés (MNC, MOC)</option>
-                      <option value="subalterno-maquinas">Subalterno de Máquinas (MNM, MOM)</option>
-                      <option value="cozinheiro-taifeiro">Cozinheiro / Taifeiro (CZA, TAA)</option>
-                      <option value="fluviario">Fluvário</option>
-                      <option value="onshore">Staff Onshore (Administrativo)</option>
-                      <option value="outros">Outros</option>
+                      <option value="" disabled selected>Selecione sua função...</option>
+                      <option value="1OM">1OM - Primeiro Oficial de Máquinas</option>
+                      <option value="1ON">1ON - Primeiro Oficial de Náutica</option>
+                      <option value="2OM">2OM - Segundo Oficial de Máquinas</option>
+                      <option value="2ON">2ON - Segundo Oficial de Náutica</option>
+                      <option value="CCB">CCB - Capitão de Cabotagem</option>
+                      <option value="CDM">CDM - Condutor de Máquinas</option>
+                      <option value="CLC">CLC - Capitão de Longo Curso</option>
+                      <option value="CTR">CTR - Contramestre</option>
+                      <option value="CZA">CZA - Cozinheiro</option>
+                      <option value="ELT">ELT - Eletricista</option>
+                      <option value="ENF">ENF - Enfermeiro</option>
+                      <option value="MAM">MAM - Marinheiro Auxiliar de Máquinas</option>
+                      <option value="MCB">MCB - Mestre de Cabotagem</option>
+                      <option value="MNC">MNC - Marinheiro de Convés</option>
+                      <option value="MNM">MNM - Marinheiro de Máquinas</option>
+                      <option value="MOC">MOC - Moço de Convés</option>
+                      <option value="MOM">MOM - Moço de Máquinas</option>
+                      <option value="OSM">OSM - Oficial Superior de Máquinas</option>
+                      <option value="RO">RO - Operador de Rádio (Rádio Operador)</option>
+                      <option value="TAA">TAA - Taifeiro</option>
                     </select>
                   </div>
                 </div>
               </div>
-  
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="fc-estado" class="form__label">Estado <span class="form__required" aria-label="obrigatório">*</span></label>
+                  <input type="text" id="fc-estado" name="estado" class="form__control" placeholder="Ex:Rio De Janeiro" required aria-required="true" autocomplete="estado" />
+                </div>
+                <div class="form__group">
+                  <label for="fc-cidade" class="form__label">Cidade <span class="form__required" aria-label="obrigatório">*</span></label>
+                  <input type="text" id="fc-cidade" name="cidade" class="form__control" placeholder="Ex: Niterói" required aria-required="true" autocomplete="cidade" />
+                </div>
+              </div>
               <div class="form__group">
                 <label for="fc-mensagem" class="form__label">Apresentação Resumida / Cursos Relevantes</label>
                 <textarea id="fc-mensagem" name="mensagem" class="form__control form__textarea" placeholder="Descreva brevemente suas qualificações, cursos válidos (como HUET, CBSP) e experiências..." rows="4"></textarea>

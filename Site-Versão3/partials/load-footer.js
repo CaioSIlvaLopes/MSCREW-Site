@@ -38,6 +38,8 @@
               <li><a class="site-footer__link" href="index.html">Início</a></li>
               <li><a class="site-footer__link" href="servicos.html">Serviços</a></li>
               <li><a class="site-footer__link" href="sobre.html">Sobre Nós</a></li>
+              <li><a class="site-footer__link" href="politicas-procedimentos.html">Políticas e Procedimentos</a></li>
+              <li><a class="site-footer__link" href="politicas-mlc.html">Conformidade MLC 2006</a></li>
               <li><a class="site-footer__link" href="trabalhe-conosco.html">Portal do Marítimo</a></li>
               <li><a class="site-footer__link" href="contato.html">Contato</a></li>
             </ul>

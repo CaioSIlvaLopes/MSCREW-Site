@@ -1,0 +1,657 @@
+/* ==========================================================================
+   MS CREW — POLÍTICAS E PROCEDIMENTOS DE TRABALHO
+   --------------------------------------------------------------------------
+   Metodologia : BEM (Block__Element--Modifier)
+   Abordagem   : Mobile First
+   Arquivo     : css/politicas-procedimentos.css
+   ========================================================================== */
+
+/* ── HERO DA PÁGINA ───────────────────────────────────────────────────── */
+.policies-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(77px + 2.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-white);
+  overflow: hidden;
+  background-color: var(--color-abismo);
+}
+
+@media (min-width: 960px) {
+  .policies-hero {
+    min-height: 56vh;
+    padding-top: calc(80px + 3rem);
+    padding-bottom: clamp(3.5rem, 6vw, 5rem);
+  }
+}
+
+.policies-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.policies-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  opacity: 0.35;
+  filter: saturate(1.2);
+}
+
+.policies-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 33, 63, 0.96) 0%,
+    rgba(0, 75, 135, 0.88) 55%,
+    rgba(0, 163, 224, 0.65) 100%
+  );
+  mix-blend-mode: multiply;
+}
+
+.policies-hero__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: radial-gradient(var(--color-white) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.policies-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.policies-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.policies-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-horizonte-soft);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
+}
+
+.policies-hero__badge-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-horizonte);
+  flex-shrink: 0;
+}
+
+.policies-hero__code {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.05em;
+}
+
+.policies-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 1.25rem + 2.4vw, 2.85rem);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+  max-width: 50ch;
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.policies-hero__title-accent {
+  color: var(--color-horizonte);
+  display: inline;
+}
+
+.policies-hero__intro {
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.1875rem);
+  color: var(--color-line);
+  max-width: 68ch;
+  line-height: 1.65;
+  margin-bottom: var(--space-xl);
+}
+
+.policies-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+
+/* ── BARRA DE NAVEGAÇÃO RÁPIDA / ÍNDICE (STICKY) ─────────────────────── */
+.policies-nav-bar {
+  position: sticky;
+  top: 77px;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  transition: top var(--duration) var(--ease-out);
+}
+
+@media (min-width: 960px) {
+  .policies-nav-bar {
+    top: 96px; /* ajustado para cabeçalho scrolled */
+  }
+}
+
+.policies-nav-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: 0.625rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.policies-nav-bar__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.policies-nav-bar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.policies-nav-bar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--color-muted);
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  transition: color var(--duration) var(--ease-out), background-color var(--duration) var(--ease-out);
+  white-space: nowrap;
+}
+
+.policies-nav-bar__link:hover {
+  color: var(--color-maritimo);
+  background-color: var(--color-horizonte-mist);
+}
+
+.policies-nav-bar__link--active {
+  color: var(--color-maritimo);
+  background-color: var(--color-horizonte-soft);
+}
+
+.policies-nav-bar__tag {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: var(--radius-pill);
+  background: var(--color-horizonte-soft);
+  color: var(--color-maritimo);
+}
+
+.policies-nav-bar__download {
+  flex-shrink: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .policies-nav-bar__download {
+    display: inline-flex;
+  }
+}
+
+
+/* ── SEÇÕES DE CONTEÚDO ──────────────────────────────────────────────── */
+.policies-section {
+  padding-block: clamp(3rem, 4vw, 5.5rem);
+  position: relative;
+}
+
+.policies-section--light {
+  background-color: var(--color-white);
+}
+
+.policies-section--surface {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.policies-section--signature {
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-horizonte-mist) 100%);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.policies-header {
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.policies-header__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-horizonte-strong);
+  margin-bottom: var(--space-xs);
+}
+
+.policies-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.35rem + 1.6vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--color-maritimo);
+  margin-bottom: var(--space-xs);
+}
+
+.policies-header__count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.policies-header__count-badge {
+  background: var(--color-maritimo);
+  color: var(--color-white);
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-2xs);
+  font-weight: 800;
+}
+
+
+/* ── LISTA DE ITENS NORMATIVOS (CARDS) ───────────────────────────────── */
+.policies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.policies-list__item {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(0.875rem, 1.5vw, 1.5rem);
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration) var(--ease-out),
+              box-shadow var(--duration) var(--ease-out),
+              border-color var(--duration) var(--ease-out);
+  position: relative;
+}
+
+.policies-section--surface .policies-list__item {
+  background: var(--color-white);
+}
+
+.policies-list__item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-horizonte-soft);
+}
+
+.policies-list__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: var(--space-md);
+  bottom: var(--space-md);
+  width: 4px;
+  background: transparent;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  transition: background-color var(--duration) var(--ease-out);
+}
+
+.policies-list__item:hover::before {
+  background: var(--color-horizonte);
+}
+
+/* Indicador numérico */
+.policies-list__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-horizonte-mist);
+  color: var(--color-maritimo);
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  font-weight: 900;
+  border: 1px solid var(--color-line);
+  flex-shrink: 0;
+  transition: background-color var(--duration) var(--ease-out),
+              color var(--duration) var(--ease-out),
+              border-color var(--duration) var(--ease-out);
+}
+
+.policies-list__item:hover .policies-list__num {
+  background-color: var(--color-maritimo);
+  color: var(--color-white);
+  border-color: var(--color-maritimo);
+}
+
+.policies-section--surface .policies-list__num {
+  background-color: #ebf5fa;
+  color: var(--color-maritimo-deep);
+}
+
+/* Corpo e Texto da Cláusula */
+.policies-list__body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0.35rem; /* Alinhamento óptico com o número */
+}
+
+.policies-list__text {
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.0875rem);
+  line-height: 1.75;
+  color: var(--color-ink);
+  margin: 0;
+  word-break: break-word;
+}
+
+.policies-list__text strong {
+  color: var(--color-maritimo-deep);
+  font-weight: 700;
+}
+
+
+/* ── SUBLISTA (CASO INDISCIPLINA) ────────────────────────────────────── */
+.policies-sublist-wrapper {
+  margin-top: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-horizonte-mist);
+  border-left: 3px solid var(--color-horizonte);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.policies-sublist-wrapper__header {
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-maritimo);
+  margin-bottom: var(--space-xs);
+}
+
+.policies-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.policies-sublist__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.625rem;
+  align-items: baseline;
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+
+.policies-sublist__bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-horizonte-strong);
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+
+/* ── BLOCO DE ASSINATURA / ENCERRAMENTO ──────────────────────────────── */
+.policies-signature-box {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  position: relative;
+  overflow: hidden;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.policies-signature-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-horizonte) 0%, var(--color-maritimo) 100%);
+}
+
+.policies-signature-box__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .policies-signature-box__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+.policies-signature__greeting {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: var(--space-lg);
+  letter-spacing: 0.02em;
+}
+
+.policies-signature__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  font-weight: 900;
+  color: var(--color-maritimo);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.policies-signature__role {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.policies-signature__divider {
+  width: 60px;
+  height: 2px;
+  background: var(--color-horizonte);
+  margin-block: var(--space-sm);
+}
+
+.policies-signature__taxid {
+  font-size: var(--fs-sm);
+  font-family: monospace, var(--font-body);
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: 0.25rem;
+}
+
+.policies-signature__company {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--color-maritimo-deep);
+  margin: 0;
+}
+
+/* Selo de Homologação Institucional */
+.policies-signature__seal {
+  background: var(--color-horizonte-mist);
+  border: 1px dashed var(--color-horizonte);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-width: 220px;
+}
+
+.policies-signature__seal-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--color-maritimo);
+  margin-bottom: 0.25rem;
+}
+
+.policies-signature__seal-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-maritimo);
+  margin: 0;
+}
+
+.policies-signature__seal-subtitle {
+  font-size: var(--fs-2xs);
+  color: var(--color-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* ── BOX DE DESTAQUE / TRANSIÇÃO ─────────────────────────────────────── */
+.policies-callout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .policies-callout {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.policies-callout__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  color: var(--color-maritimo);
+  margin-bottom: var(--space-2xs);
+}
+
+.policies-callout__text {
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* ── ESTILOS DE IMPRESSÃO (PRINT) ────────────────────────────────────── */
+@media print {
+  #site-header,
+  #site-footer,
+  .policies-nav-bar,
+  .policies-hero__bg,
+  .policies-hero__overlay,
+  .policies-hero__pattern,
+  .policies-hero__actions,
+  .cta-band {
+    display: none !important;
+  }
+
+  .policies-hero {
+    min-height: auto !important;
+    padding: 1rem 0 !important;
+    background: none !important;
+    color: #000 !important;
+  }
+
+  .policies-hero__title {
+    color: #000 !important;
+    font-size: 1.5rem !important;
+  }
+
+  .policies-section {
+    padding: 1rem 0 !important;
+    background: none !important;
+    border: none !important;
+  }
+
+  .policies-list__item {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.75rem !important;
+  }
+
+  .policies-signature-box {
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+}

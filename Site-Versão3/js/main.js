@@ -47,8 +47,9 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     e.preventDefault();
 
-    const header = document.getElementById('cabecalho-principal');
-    const headerHeight = header ? header.offsetHeight : 0;
+    const header = document.getElementById('site-header') || document.getElementById('cabecalho-principal');
+    const subnav = document.querySelector('.policies-nav-bar');
+    const headerHeight = (header ? header.offsetHeight : 0) + (subnav ? subnav.offsetHeight : 0);
 
     window.scrollTo({
       top: target.getBoundingClientRect().top + window.scrollY - headerHeight - 8,
