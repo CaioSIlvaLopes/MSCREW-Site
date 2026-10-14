@@ -249,6 +249,87 @@
   <!-- JavaScript -->
   <script src="js/main.js" defer></script>
   <script src="js/contato.js" defer></script> <!-- Reutiliza a lógica do formulário de contato -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Busca pelo ID form-candidato ou pega o formulário que contém o botão
+    const btn = document.getElementById('btn-enviar-contato');
+    const form = document.getElementById('form-candidato') || btn.closest('form');
+    const fileInput = document.getElementById('fc-curriculo');
+    const uploadTexto = document.getElementById('upload-texto');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZ4NsX1yQo6_wkGVbOjP4Dnm-Wp-i_tWN7vMcyN6uc12Nj5fV1lAWVkYkEmuyqdFvyWw/exec';
 
+    // Atualiza o texto na tela quando o candidato escolhe um PDF
+    if (fileInput && uploadTexto) {
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+          uploadTexto.textContent = 'Arquivo selecionado: ' + fileInput.files[0].name;
+        }
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      e.stopImmediatePropagation(); // Evita conflito caso o contato.js tente interceptar
+
+      const btnOriginalHTML = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = 'Enviando currículo...';
+
+      try {
+        // Coleta todos os campos de texto e select do formulário
+        const formData = new FormData(form);
+        const payload = {};
+        formData.forEach((value, key) => {
+          if (key !== 'curriculo') {
+            payload[key] = value;
+          }
+        });
+
+        // Converte o currículo PDF para Base64 (se houver)
+        const file = fileInput.files[0];
+        if (file) {
+          if (file.size > 5 * 1024 * 1024) {
+            alert('O arquivo PDF deve ter no máximo 5 MB.');
+            btn.disabled = false;
+            btn.innerHTML = btnOriginalHTML;
+            return;
+          }
+          payload.fileName = `${payload.categoria || 'CANDIDATO'} - ${payload.nome || 'Curriculo'} - ${file.name}`;
+          payload.fileMimeType = file.type;
+          payload.fileBase64 = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result.split(',')[1]);
+            reader.onerror = error => reject(error);
+            reader.readAsDataURL(file);
+          });
+        }
+
+        // Envia para o Google Apps Script
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result.result === 'success') {
+          alert('Currículo enviado com sucesso!');
+          form.reset();
+          if (uploadTexto) {
+            uploadTexto.innerHTML = 'Anexe seu Currículo (PDF) <span class="form-required">*</span>';
+          }
+        } else {
+          alert('Erro ao salvar na planilha: ' + result.error);
+        }
+      } catch (error) {
+        console.error('Erro no envio:', error);
+        alert('Erro ao enviar o formulário. Verifique sua conexão e tente novamente.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = btnOriginalHTML;
+      }
+    });
+  });
+</script>
 </body>
 </html>

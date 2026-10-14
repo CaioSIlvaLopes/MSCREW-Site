@@ -25,7 +25,7 @@
     { href: 'servicos.html', label: 'Serviços', match: ['servicos.html'] },
     { href: 'index.html#segmentos', label: 'Segmentos', match: [] },
     { href: 'sobre.html', label: 'Sobre Nós', match: ['sobre.html'] },
-    { href: 'politicas-procedimentos.html', label: 'Políticas', match: ['politicas-procedimentos.html', 'politicas-mlc.html'] },
+    { href: 'politicas-mlc.html', label: 'Políticas', match: ['politicas-mlc.html', 'politicas-mlc.html'] },
     { href: 'trabalhe-conosco.html', label: 'Trabalhe conosco', match: ['trabalhe-conosco.html'] }
   ];
 
