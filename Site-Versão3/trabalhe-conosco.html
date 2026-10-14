@@ -205,8 +205,8 @@
                 </div>
               </div>
               <div class="form__group">
-                <label for="fc-mensagem" class="form__label">Apresentação Resumida / Cursos Relevantes</label>
-                <textarea id="fc-mensagem" name="mensagem" class="form__control form__textarea" placeholder="Descreva brevemente suas qualificações, cursos válidos (como HUET, CBSP) e experiências..." rows="4"></textarea>
+                <label for="fc-mensagem" class="form__label">Apresentação Resumida / Cursos Relevantes <span class="form__required" aria-label="obrigatório">*</span></label>
+                <textarea id="fc-mensagem" name="mensagem" class="form__control form__textarea" placeholder="Descreva brevemente suas qualificações, cursos válidos (como HUET, CBSP) e experiências..." rows="4" required aria-required="true"></textarea>
               </div>
   
               <div class="file-upload">
@@ -248,35 +248,108 @@
 
   <!-- JavaScript -->
   <script src="js/main.js" defer></script>
-  <script src="js/contato.js" defer></script> <!-- Reutiliza a lógica do formulário de contato -->
   <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Busca pelo ID form-candidato ou pega o formulário que contém o botão
     const btn = document.getElementById('btn-enviar-contato');
-    const form = document.getElementById('form-candidato') || btn.closest('form');
+    const form = document.getElementById('formulario-contato') || document.getElementById('form-candidato') || btn.closest('form');
     const fileInput = document.getElementById('fc-curriculo');
     const uploadTexto = document.getElementById('upload-texto');
+    const uploadContainer = document.querySelector('.file-upload');
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxZ4NsX1yQo6_wkGVbOjP4Dnm-Wp-i_tWN7vMcyN6uc12Nj5fV1lAWVkYkEmuyqdFvyWw/exec';
 
-    // Atualiza o texto na tela quando o candidato escolhe um PDF
+    const defaultUploadHTML = 'Anexe seu Currículo (PDF) <span class="form__required" aria-label="obrigatório">*</span>';
+
+    // Atualiza texto e limpa erro visual quando arquivo é selecionado
     if (fileInput && uploadTexto) {
       fileInput.addEventListener('change', () => {
         if (fileInput.files.length > 0) {
           uploadTexto.textContent = 'Arquivo selecionado: ' + fileInput.files[0].name;
+          if (uploadContainer) uploadContainer.style.borderColor = '';
+        } else {
+          uploadTexto.innerHTML = defaultUploadHTML;
         }
       });
     }
 
+    // Limpa destaque de erro ao digitar ou alterar qualquer campo
+    const camposInputs = form.querySelectorAll('input, select, textarea');
+    camposInputs.forEach(input => {
+      input.addEventListener('input', () => {
+        input.style.borderColor = '';
+      });
+      input.addEventListener('change', () => {
+        input.style.borderColor = '';
+      });
+    });
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      e.stopImmediatePropagation(); // Evita conflito caso o contato.js tente interceptar
+      e.stopImmediatePropagation();
 
+      // Lista de todos os campos com nomes descritivos
+      const camposObrigatorios = [
+        { el: document.getElementById('fc-nome'), nome: 'Nome Completo' },
+        { el: document.getElementById('fc-email'), nome: 'E-mail', isEmail: true },
+        { el: document.getElementById('fc-telefone'), nome: 'Telefone / WhatsApp' },
+        { el: document.getElementById('fc-categoria'), nome: 'Categoria / Função' },
+        { el: document.getElementById('fc-estado'), nome: 'Estado' },
+        { el: document.getElementById('fc-cidade'), nome: 'Cidade' },
+        { el: document.getElementById('fc-mensagem'), nome: 'Apresentação Resumida / Cursos Relevantes' }
+      ];
+
+      // 1. Validação de preenchimento dos campos de texto e seleção
+      for (const campo of camposObrigatorios) {
+        if (!campo.el || !campo.el.value.trim()) {
+          alert(`Por favor, preencha o campo obrigatório: ${campo.nome}.`);
+          if (campo.el) {
+            campo.el.style.borderColor = '#b42318';
+            campo.el.focus();
+          }
+          return;
+        }
+
+        if (campo.isEmail) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(campo.el.value.trim())) {
+            alert('Por favor, informe um endereço de e-mail válido.');
+            campo.el.style.borderColor = '#b42318';
+            campo.el.focus();
+            return;
+          }
+        }
+      }
+
+      // 2. Validação obrigatória do Currículo (PDF)
+      const file = fileInput && fileInput.files ? fileInput.files[0] : null;
+      if (!file) {
+        alert('Por favor, anexe o seu currículo em formato PDF antes de enviar.');
+        if (uploadContainer) {
+          uploadContainer.style.borderColor = '#b42318';
+          uploadContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+
+      const isPDF = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
+      if (!isPDF) {
+        alert('O arquivo anexado deve ser exclusivamente no formato PDF.');
+        if (uploadContainer) {
+          uploadContainer.style.borderColor = '#b42318';
+        }
+        return;
+      }
+
+      if (file.size > 5 * 1024 * 1024) {
+        alert('O arquivo PDF deve ter no máximo 5 MB.');
+        return;
+      }
+
+      // Todos os campos preenchidos com sucesso - Executa o envio
       const btnOriginalHTML = btn.innerHTML;
       btn.disabled = true;
       btn.textContent = 'Enviando currículo...';
 
       try {
-        // Coleta todos os campos de texto e select do formulário
         const formData = new FormData(form);
         const payload = {};
         formData.forEach((value, key) => {
@@ -285,24 +358,14 @@
           }
         });
 
-        // Converte o currículo PDF para Base64 (se houver)
-        const file = fileInput.files[0];
-        if (file) {
-          if (file.size > 5 * 1024 * 1024) {
-            alert('O arquivo PDF deve ter no máximo 5 MB.');
-            btn.disabled = false;
-            btn.innerHTML = btnOriginalHTML;
-            return;
-          }
-          payload.fileName = `${payload.categoria || 'CANDIDATO'} - ${payload.nome || 'Curriculo'} - ${file.name}`;
-          payload.fileMimeType = file.type;
-          payload.fileBase64 = await new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result.split(',')[1]);
-            reader.onerror = error => reject(error);
-            reader.readAsDataURL(file);
-          });
-        }
+        payload.fileName = `${payload.categoria || 'CANDIDATO'} - ${payload.nome || 'Curriculo'} - ${file.name}`;
+        payload.fileMimeType = file.type || 'application/pdf';
+        payload.fileBase64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result.split(',')[1]);
+          reader.onerror = error => reject(error);
+          reader.readAsDataURL(file);
+        });
 
         // Envia para o Google Apps Script
         const response = await fetch(scriptURL, {
@@ -316,7 +379,10 @@
           alert('Currículo enviado com sucesso!');
           form.reset();
           if (uploadTexto) {
-            uploadTexto.innerHTML = 'Anexe seu Currículo (PDF) <span class="form-required">*</span>';
+            uploadTexto.innerHTML = defaultUploadHTML;
+          }
+          if (uploadContainer) {
+            uploadContainer.style.borderColor = '';
           }
         } else {
           alert('Erro ao salvar na planilha: ' + result.error);
