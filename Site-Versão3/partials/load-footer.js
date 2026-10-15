@@ -58,8 +58,9 @@
             <h2 class="site-footer__title">Atendimento</h2>
             <ul class="site-footer__list">
               <li><span class="site-footer__link">${ICON.pin}Rua do Mercado, 17 – Sala 501 – Centro<br />Rio de Janeiro – RJ</span></li>
-              <li><a class="site-footer__link" href="mailto:mscrew@mscrew.com.br">${ICON.mail}mscrew@mscrew.com.br</a></li>
-              <li><a class="site-footer__link" href="tel:+552125162721">${ICON.phone}+55 (21) 2516-2721</a></li>
+              <li><a class="site-footer__link" href="mailto:mscrew@mscrew.com.br">${ICON.mail}mscrew@mscrew.com.b</a></li>
+              <li><a class="site-footer__link" href="mailto:rh@mscrew.com.br">${ICON.mail}rh@mscrew.com.br</a></li>
+              <!-- <li><a class="site-footer__link" href="tel:+552125162721">${ICON.phone}+55 (21) 2516-2721</a></li> -->
               <li><span class="site-footer__link">${ICON.clock}Plantão operacional 24h</span></li>
             </ul>
           </div>
@@ -67,7 +68,7 @@
         </div>
 
         <div class="site-footer__bottom">
-          <p>&copy; ${year} MS CREW Serviços Marítimos LTDA. Todos os direitos reservados.</p>
+          <p>&copy; ${year} MS CREW Serviços Marítimos LTDA. Todos os direitos reservados.</p> 
           <p>Crew Management · Recrutamento Aquaviário · Gestão de Tripulação</p>
         </div>
       </div>

@@ -246,7 +246,7 @@
 }
 @media (min-width: 1024px) {
   .segments__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -285,7 +285,7 @@
   border-top-right-radius: var(--radius-sm);
 }
 .segment-card__body {
-  padding: var(--space-lg);
+  padding: var(--space-md);
   display: flex;
   flex-direction: column;
   flex: 1;
